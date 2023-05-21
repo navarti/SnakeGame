@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="SnakeGame.Pages.MainPageCategories.View.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SnakeGame.Pages.MainPageCategories.View"
+             mc:Ignorable="d" 
+             d:Height="700" d:Width="1400"
+             Background="Transparent">
+
+    
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="100, 0, 100, 0"
+                    VerticalAlignment="Center">
+
+            <TextBlock Style="{StaticResource ColorTextBlock}"
+                Text="Theme"
+                FontSize="50"
+                Height="100"/>
+
+            <RadioButton Grid.Row="1"
+                Width="400"
+                Height="100"
+                Margin="300, 0, 0, 0"
+                Click="ChangeTheme"
+                FontSize="50"
+                Content="Click to change"
+                Style="{StaticResource MenuButtonStyle}"/>   
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="100, 0, 100, 0"
+                    Grid.Row="1"
+                    VerticalAlignment="Center">
+
+            <TextBlock Style="{StaticResource ColorTextBlock}"
+                Text="Snake Color"
+                FontSize="50"
+                VerticalAlignment="Center"/>
+
+            <RadioButton
+                Width="50"
+                Height="50"
+                Margin="200, 0, 0, 0"
+                Click="SnakeColorPrevious"
+                FontSize="50"
+                Content="&lt;&lt;"
+                Style="{StaticResource MenuButtonStyle}"/>
+
+            <TextBlock Style="{StaticResource ColorTextBlock}"
+                VerticalAlignment="Center"
+                FontSize="50"
+                       Width="150"
+                       TextAlignment="Center"
+                       x:Name="SnakeColorTextBox"
+                       Margin="35"
+                />
+            
+            <RadioButton Grid.Row="1"
+                Width="50"
+                Height="50"
+                Click="SnakeColorNext"
+                FontSize="50"
+                Content="&gt;&gt;"
+                Style="{StaticResource MenuButtonStyle}"/>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="GamePages\GamePage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\MainPageCategories\View\SelectGameView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\MainPageCategories\View\SettingsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="GamePages\GamePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GamePages\GameTools.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\MainPageCategories\View\SelectGameView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\MainPageCategories\View\SettingsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ToolsStyles\Colors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ToolsStyles\ColorToolsStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ToolsStyles\MenuButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ToolsStyles\QuitProgramButton\QuitProgramButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ToolsStyles\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,18 @@
+﻿<Application x:Class="SnakeGame.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SnakeGame"
+             StartupUri="MainWindow.xaml">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ToolsStyles/Colors.xaml"/>
+                <ResourceDictionary Source="ToolsStyles/ColorToolsStyle.xaml"/>
+                <ResourceDictionary Source="ToolsStyles/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="ToolsStyles/MenuButtonStyle.xaml"/>
+                <ResourceDictionary Source="ToolsStyles/QuitProgramButton/QuitProgramButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

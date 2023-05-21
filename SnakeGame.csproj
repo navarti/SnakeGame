@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ToolsStyles\Buttons Images\**" />
+    <EmbeddedResource Remove="ToolsStyles\Buttons Images\**" />
+    <None Remove="ToolsStyles\Buttons Images\**" />
+    <Page Remove="ToolsStyles\Buttons Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="GamePages\SnakeImages\Green\Body.png" />
+    <None Remove="GamePages\SnakeImages\Green\DeadBody.png" />
+    <None Remove="GamePages\SnakeImages\Green\DeadHead.png" />
+    <None Remove="GamePages\SnakeImages\Green\Empty.png" />
+    <None Remove="GamePages\SnakeImages\Green\Food.png" />
+    <None Remove="GamePages\SnakeImages\Green\Head.png" />
+    <None Remove="GamePages\SnakeImages\Green\icon.ico" />
+    <None Remove="GamePages\SnakeImages\Red\Body.png" />
+    <None Remove="GamePages\SnakeImages\Red\DeadBody.png" />
+    <None Remove="GamePages\SnakeImages\Red\DeadHead.png" />
+    <None Remove="GamePages\SnakeImages\Red\Empty.png" />
+    <None Remove="GamePages\SnakeImages\Red\Food.png" />
+    <None Remove="GamePages\SnakeImages\Red\Head.png" />
+    <None Remove="ToolsStyles\Images\ShutdownImageDark.png" />
+    <None Remove="ToolsStyles\Images\ShutdownImageWhite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="GamePages\SnakeImages\Green\Body.png" />
+    <Resource Include="GamePages\SnakeImages\Green\DeadBody.png" />
+    <Resource Include="GamePages\SnakeImages\Green\DeadHead.png" />
+    <Resource Include="GamePages\SnakeImages\Green\Empty.png" />
+    <Resource Include="GamePages\SnakeImages\Green\Food.png" />
+    <Resource Include="GamePages\SnakeImages\Green\Head.png" />
+    <Resource Include="GamePages\SnakeImages\icon.ico" />
+    <Resource Include="GamePages\SnakeImages\Red\Body.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GamePages\SnakeImages\Red\DeadBody.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GamePages\SnakeImages\Red\DeadHead.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GamePages\SnakeImages\Red\Empty.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GamePages\SnakeImages\Red\Food.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="GamePages\SnakeImages\Red\Head.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ToolsStyles\Images\ShutdownImageDark.png" />
+    <Resource Include="ToolsStyles\Images\ShutdownImageWhite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="GamePages\GamePageButtons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GamePages\GamePageDraw.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

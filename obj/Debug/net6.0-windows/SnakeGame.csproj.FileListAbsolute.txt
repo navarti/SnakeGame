@@ -1,0 +1,166 @@
+D:\KPI1-2\OP\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.exe
+D:\KPI1-2\OP\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.deps.json
+D:\KPI1-2\OP\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.runtimeconfig.json
+D:\KPI1-2\OP\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.dll
+D:\KPI1-2\OP\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.pdb
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.csproj.AssemblyReference.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\StartPage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\App.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame_MarkupCompile.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame_MarkupCompile.lref
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\MainWindow.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\StartPage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.g.resources
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.GeneratedMSBuildEditorConfig.editorconfig
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfoInputs.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfo.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.csproj.CoreCompileInputs.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.dll
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\refint\SnakeGame.dll
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.pdb
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.genruntimeconfig.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ref\SnakeGame.dll
+D:\KPI1-2\OP\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.dll.config
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\App.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\QuitProgramButton\QuitProgramButtonStyle.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\ColorToolsStyle.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\TextBoxStyle.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\LogInPage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\LogInPage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\MenuButtonStyle.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\Colors.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\RegisterPage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\RegisterPage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SelectGameView.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SelectGameView.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SettingsView.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SettingsView.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\GamePages\ClassicModePage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\GamePages\ClassicModePage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\GamePages\GameTools.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\GamePages\AIModePage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\GamePages\AIModePage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame.csproj.AssemblyReference.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\ToolsStyles\Colors.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\GamePages\GamePage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\LogInPage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\MainPage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SelectGameView.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SettingsView.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\RegisterPage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\StartPage.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\App.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame_MarkupCompile.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame_MarkupCompile.lref
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame.dll
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\refint\SnakeGame.dll
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame.pdb
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\bin\Debug\net6.0-windows\SnakeGame.exe
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\bin\Debug\net6.0-windows\SnakeGame.dll.config
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\bin\Debug\net6.0-windows\SnakeGame.deps.json
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\bin\Debug\net6.0-windows\SnakeGame.runtimeconfig.json
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\bin\Debug\net6.0-windows\SnakeGame.dll
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\bin\Debug\net6.0-windows\SnakeGame.pdb
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\App.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\MainWindow.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\GamePages\GamePage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\GamePages\GameTools.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\LogInPage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\MainPage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SelectGameView.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SettingsView.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\RegisterPage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\Pages\StartPage.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\ToolsStyles\ColorToolsStyle.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\ToolsStyles\MenuButtonStyle.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\ToolsStyles\QuitProgramButton\QuitProgramButtonStyle.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\ToolsStyles\TextBoxStyle.baml
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame.g.resources
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame.GeneratedMSBuildEditorConfig.editorconfig
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfoInputs.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfo.cs
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame.csproj.CoreCompileInputs.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\SnakeGame.genruntimeconfig.cache
+D:\KPI1-2\OP\курс\snake\SnakeGame - develop\obj\Debug\net6.0-windows\ref\SnakeGame.dll
+D:\KPI1-2\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.exe
+D:\KPI1-2\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.dll.config
+D:\KPI1-2\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.deps.json
+D:\KPI1-2\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.runtimeconfig.json
+D:\KPI1-2\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.dll
+D:\KPI1-2\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.pdb
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.csproj.AssemblyReference.cache
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\Colors.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPage.g.cs
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SelectGameView.g.cs
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SettingsView.g.cs
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\App.g.cs
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame_MarkupCompile.cache
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame_MarkupCompile.lref
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\App.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\MainWindow.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPage.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SelectGameView.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SettingsView.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\ColorToolsStyle.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\MenuButtonStyle.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\QuitProgramButton\QuitProgramButtonStyle.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\TextBoxStyle.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.g.resources
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.GeneratedMSBuildEditorConfig.editorconfig
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfoInputs.cache
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfo.cs
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.csproj.CoreCompileInputs.cache
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.dll
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\refint\SnakeGame.dll
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.pdb
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.genruntimeconfig.cache
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ref\SnakeGame.dll
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\GamePages\GamePage.g.cs
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\ToolsStyles\Colors.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\GamePages\GamePage.g.cs
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\Pages\MainPage.g.cs
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SelectGameView.g.cs
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SettingsView.g.cs
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame_MarkupCompile.cache
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame_MarkupCompile.lref
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame.dll
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\refint\SnakeGame.dll
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame.pdb
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\bin\Debug\net6.0-windows\SnakeGame.exe
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\bin\Debug\net6.0-windows\SnakeGame.dll.config
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\bin\Debug\net6.0-windows\SnakeGame.deps.json
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\bin\Debug\net6.0-windows\SnakeGame.runtimeconfig.json
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\bin\Debug\net6.0-windows\SnakeGame.dll
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\bin\Debug\net6.0-windows\SnakeGame.pdb
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\App.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\GamePages\GamePage.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\GamePages\GameTools.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\Pages\MainPage.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SelectGameView.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SettingsView.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\ToolsStyles\ColorToolsStyle.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\ToolsStyles\MenuButtonStyle.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\ToolsStyles\QuitProgramButton\QuitProgramButtonStyle.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\ToolsStyles\TextBoxStyle.baml
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame.g.resources
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfo.cs
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\SnakeGame.genruntimeconfig.cache
+C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\ref\SnakeGame.dll
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\GamePages\GamePage.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\GamePages\GameTools.baml

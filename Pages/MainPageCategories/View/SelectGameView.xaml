@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="SnakeGame.Pages.MainPageCategories.View.SelectGameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SnakeGame.Pages.MainPageCategories.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="Transparent">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <RadioButton Style="{StaticResource MenuButtonStyle}"
+                     Grid.Column="0"
+                     x:Name="ClassicButon"
+                     Content="Play"
+                     FontSize="50"
+                     Margin="50"
+                     Click="PlayClick"/>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="50">
+            <TextBlock Style="{StaticResource ColorTextBlock}"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Text="Enter the dimension of the grid"
+                       FontSize="30"/>
+
+
+            <Grid Margin="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="InputRows"
+                     Width="75"
+                         VerticalAlignment="Center"
+                     PreviewTextInput="CheckInput"
+                />
+
+                <TextBox x:Name="InputCols"
+                         Grid.Column="1"
+                         VerticalAlignment="Center"
+                     PreviewTextInput="CheckInput"
+                     Width="75"
+                />
+
+            </Grid>
+
+            <TextBlock Style="{StaticResource ColorTextBlock}"
+                       HorizontalAlignment="Center"
+                       Foreground="Red"
+                       x:Name="ErrorTextBlock"
+                       FontSize="15"
+                       Text=""/>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

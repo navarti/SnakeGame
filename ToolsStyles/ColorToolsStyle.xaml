@@ -1,0 +1,82 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:properties="clr-namespace:SnakeGame.Properties"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style TargetType="{x:Type Page}" 
+           x:Key="ColorPage">
+
+        <Setter Property="Height" Value="{x:Static SystemParameters.PrimaryScreenHeight}"/>
+        <Setter Property="Width" Value="{x:Static SystemParameters.PrimaryScreenWidth}"/>
+
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
+                         Value="Dark">
+                <Setter Property="Background" Value="{StaticResource DarkBackgroundPage}"/>
+                <Setter Property="Foreground" Value="{StaticResource DarkForegroundPage}"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
+                         Value="Light">
+                <Setter Property="Background" Value="{StaticResource LightBackgroundPage}"/>
+                <Setter Property="Foreground" Value="{StaticResource LightForegroundPage}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" 
+           x:Key="ColorTextBlock">
+
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
+                         Value="Dark">
+                <Setter Property="Foreground" Value="{StaticResource DarkForegroundPage}"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
+                         Value="Light">
+                <Setter Property="Foreground" Value="{StaticResource LightForegroundPage}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    
+
+    <Style TargetType="{x:Type GridSplitter}"
+           x:Key="ColorVerticalGridSplitter">
+        <Setter Property="Width" Value="2"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
+                         Value="Dark">
+                <Setter Property="Background" Value="{StaticResource DarkForegroundPage}"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
+                         Value="Light">
+                <Setter Property="Background" Value="{StaticResource LightForegroundPage}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="{x:Type GridSplitter}"
+           x:Key="ColorHoryzontalGridSplitter">
+        <Setter Property="Height" Value="2"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
+                         Value="Dark">
+                <Setter Property="Background" Value="{StaticResource DarkForegroundPage}"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
+                         Value="Light">
+                <Setter Property="Background" Value="{StaticResource LightForegroundPage}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    
+
+
+</ResourceDictionary>

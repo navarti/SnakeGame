@@ -1,0 +1,110 @@
+﻿<Page x:Class="SnakeGame.GamePages.GamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SnakeGame.GamePages"
+      mc:Ignorable="d" 
+      Style="{StaticResource ColorPage}"
+      Title="ClassicModePage"
+      PreviewKeyDown="Page_PreviewKeyDown"
+      Loaded="Page_Loaded"
+      KeyDown="Page_KeyDown">
+
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="GameTools.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid x:Name="mainGrid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <RadioButton x:Name="BackButton" 
+                     Click="BackButtonClick"
+                     Width="100"
+                     Height="65"
+                     Content="Back"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Margin="15"
+                     Style="{StaticResource MenuButtonStyle}"
+                     FontSize="35"/>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource ColorTextBlock}"
+                   Text="Score: 0"
+                   x:Name="ScoreBlock"
+                   VerticalAlignment="Center"
+                   FontSize="45"
+                   Margin="20"/>
+
+            <CheckBox HorizontalAlignment="Center" 
+                      Style="{DynamicResource ColorCheckBox}" 
+                      VerticalAlignment="Center" 
+                      Content="AI" IsChecked="False" Click="ModeButton"
+                      />
+
+
+        </StackPanel>
+
+
+        <Button VerticalAlignment="Bottom"
+                Grid.Column="0"
+                HorizontalAlignment="Left"
+                Width="100"
+                Height="100"
+                Margin="25"
+                Click="QuitClick"
+                Style="{StaticResource QuitProgramButton}"/>
+
+
+        <Border Grid.Column="1"
+                Style="{StaticResource ColorBorder}"
+                x:Name="GridBorder"
+                BorderBrush="{StaticResource GridLineColor}"
+                RenderOptions.EdgeMode="Aliased"
+                BorderThickness="1.5"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="0, 0, 200, 0">
+            <UniformGrid x:Name="GameGrid"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         Style="{StaticResource ColorUnifromGrid}"
+                         SnapsToDevicePixels="True"
+                         RenderOptions.BitmapScalingMode="HighQuality">
+            </UniformGrid>
+        </Border>
+
+        <Border Grid.Column="1"
+                Style="{StaticResource ColorBorder}"
+                x:Name="Overlay"
+                Background="{StaticResource OverlayColor}"
+                RenderOptions.EdgeMode="Aliased"
+                BorderThickness="1.5"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="0, 0, 200, 0">
+            <TextBlock x:Name="OverlayText"
+                       FontSize="50"
+                       Foreground="White"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Text="Press any button to start"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+        </Border>
+    </Grid>
+</Page>
