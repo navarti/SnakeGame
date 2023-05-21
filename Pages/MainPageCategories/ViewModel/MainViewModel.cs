@@ -11,9 +11,11 @@ namespace SnakeGame.Pages.MainPageCategories.ViewModel
     {
         public RelayCommand SelectGameViewCommand { get; set; }
         public RelayCommand SettingsViewCommand { get; set; }
+        public RelayCommand RecordsViewCommand { get; set; }
 
         public SelectGameViewModel GameVM { get; set; }
         public SettingsViewModel SettingsVM { get; set; }
+        public RecordsViewModel RecordsVM{ get; set; }
 
         private object currentView;
         public object CurrentView
@@ -32,6 +34,8 @@ namespace SnakeGame.Pages.MainPageCategories.ViewModel
         {
             GameVM = new SelectGameViewModel();
             SettingsVM = new SettingsViewModel();
+            RecordsVM = new RecordsViewModel();
+
             CurrentView = GameVM;
 
             SelectGameViewCommand = new RelayCommand(o =>
@@ -41,6 +45,10 @@ namespace SnakeGame.Pages.MainPageCategories.ViewModel
             SettingsViewCommand = new RelayCommand(o =>
             {
                 CurrentView = SettingsVM;
+            });
+            RecordsViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = RecordsVM;
             });
         }
     }

@@ -24,6 +24,10 @@
             <DataTemplate DataType="{x:Type viewModel:SelectGameViewModel}">
                 <view:SelectGameView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:RecordsViewModel}">
+                <view:RecordsView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Page.Resources>  
     
@@ -71,7 +75,7 @@
                      Content="Play"
                      FontSize="40"/>
 
-                <RadioButton  
+                <RadioButton  Command="{Binding RecordsViewCommand}" 
                     Style="{StaticResource MenuButtonStyle}"
                      Height="100"
                      Width="400"

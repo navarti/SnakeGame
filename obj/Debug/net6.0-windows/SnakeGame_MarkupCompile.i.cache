@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\KPI1-2\курс\snake\SnakeGame\App.xaml
-11-1569951364
+12-32761702
 
-25-180107954
+27259221536
 194237474483
-GamePages\GamePage.xaml;GamePages\GameTools.xaml;MainWindow.xaml;Pages\MainPage.xaml;Pages\MainPageCategories\View\SelectGameView.xaml;Pages\MainPageCategories\View\SettingsView.xaml;ToolsStyles\Colors.xaml;ToolsStyles\ColorToolsStyle.xaml;ToolsStyles\MenuButtonStyle.xaml;ToolsStyles\QuitProgramButton\QuitProgramButtonStyle.xaml;ToolsStyles\TextBoxStyle.xaml;
+GamePages\GamePage.xaml;GamePages\GameTools.xaml;MainWindow.xaml;Pages\MainPage.xaml;Pages\MainPageCategories\View\RecordsView.xaml;Pages\MainPageCategories\View\SelectGameView.xaml;Pages\MainPageCategories\View\SettingsView.xaml;ToolsStyles\Colors.xaml;ToolsStyles\ColorToolsStyle.xaml;ToolsStyles\MenuButtonStyle.xaml;ToolsStyles\QuitProgramButton\QuitProgramButtonStyle.xaml;ToolsStyles\TextBoxStyle.xaml;
 
 False
 

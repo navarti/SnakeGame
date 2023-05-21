@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SnakeGame
+namespace SnakeGame.Pages.MainPageCategories.ViewModel
 {
-    internal class FileWriter
+    internal class RecordsViewModel
     {
-        readonly string filename_scores = "scores.txt";
-
     }
 }

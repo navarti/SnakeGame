@@ -56,7 +56,11 @@ namespace SnakeGame.GamePages
         {
             await DrawDeadSnake();
             await Task.Delay(0);
-            OverlayText.Text = "Game Over\n Press any key to restart";
+            FileManagment.FileManager fm = new FileManagment.FileManager();
+
+            OverlayText.Text = fm.CheckAndWriteScore(field.Rows, field.Cols, snake.Score) ?
+                "Congratulations! New record!\nPress any key to break it again" : 
+                "Game Over\n Press any key to restart";
             Overlay.Visibility = Visibility.Visible;
         }
 

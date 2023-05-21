@@ -10,6 +10,9 @@
     <Compile Update="GamePages\GamePage.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\MainPageCategories\View\RecordsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\MainPageCategories\View\SelectGameView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,6 +28,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GamePages\GameTools.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\MainPageCategories\View\RecordsView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\MainPageCategories\View\SelectGameView.xaml">

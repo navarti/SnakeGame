@@ -164,3 +164,5 @@ C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windo
 C:\Users\USER\Desktop\SnakeGame - last bad namespace Copy\obj\Debug\net6.0-windows\ref\SnakeGame.dll
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\GamePages\GamePage.baml
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\GamePages\GameTools.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\RecordsView.g.cs
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\RecordsView.baml

@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="SnakeGame.Pages.MainPageCategories.View.RecordsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SnakeGame.Pages.MainPageCategories.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                    Text="Score"/>
+
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="ScoreTB1"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="ScoreTB2"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="ScoreTB3"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="ScoreTB4"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="ScoreTB5"/>
+
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Grid.Column="1">
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                    Text="Dimension"/>
+
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DimensionTB1"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DimensionTB2"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DimensionTB3"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DimensionTB4"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DimensionTB5"/>
+
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Grid.Column="2">
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                    Text="Date"/>
+
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DateTB1"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DateTB2"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DateTB3"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DateTB4"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           x:Name="DateTB5"/>
+
+            </StackPanel>
+        </Grid>
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="30">
+
+            <RadioButton
+                Width="25"
+                Height="25"
+                Click="DimensionPrevious"
+                Content="&lt;&lt;"
+                Style="{StaticResource MenuButtonStyle}"/>
+
+
+            <RadioButton 
+                Margin="50, 0,0,0"
+                Width="25"
+                Height="25"
+                Click="DimensionNext"
+                Content="&gt;&gt;"
+                Style="{StaticResource MenuButtonStyle}"/>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>
