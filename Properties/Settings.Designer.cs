@@ -46,5 +46,17 @@ namespace SnakeGame.Properties {
                 this["SnakeTheme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Sound {
+            get {
+                return ((bool)(this["Sound"]));
+            }
+            set {
+                this["Sound"] = value;
+            }
+        }
     }
 }

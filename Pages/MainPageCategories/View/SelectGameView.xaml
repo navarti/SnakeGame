@@ -38,6 +38,7 @@
                 <TextBox x:Name="InputRows"
                      Width="75"
                          VerticalAlignment="Center"
+                         CommandManager.PreviewExecuted="CheckPaste" 
                      PreviewTextInput="CheckInput"
                 />
 
@@ -45,6 +46,7 @@
                          Grid.Column="1"
                          VerticalAlignment="Center"
                      PreviewTextInput="CheckInput"
+                         CommandManager.PreviewExecuted="CheckPaste" 
                      Width="75"
                 />
 

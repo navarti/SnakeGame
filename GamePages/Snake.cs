@@ -19,6 +19,7 @@ namespace SnakeGame.GamePages
         private readonly LinkedList<Position> snakePositions = new LinkedList<Position>();
         private readonly LinkedList<Direction> dirChanges = new LinkedList<Direction>();
         private readonly Random rnd = new Random();
+        SoundManager sm;
 
         public Snake(Field _field)
         {
@@ -26,6 +27,7 @@ namespace SnakeGame.GamePages
             SField.AddFood();
             Addsnake();
             Direction = Direction.Right;
+            sm = new SoundManager();
         }
 
         private void Addsnake()
@@ -123,6 +125,7 @@ namespace SnakeGame.GamePages
             if (hit == Field.GridValue.Snake || hit == Field.GridValue.Outside)
             {
                 GameOver = true;
+                sm.PlayGameOverSound();
             }
             else if (hit == Field.GridValue.Empty)
             {
@@ -134,6 +137,7 @@ namespace SnakeGame.GamePages
                 AddHead(newHeadPosition);
                 Score++;
                 SField.AddFood();
+                sm.PlayEatSound();
             }
         }
     }

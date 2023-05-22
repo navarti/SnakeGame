@@ -77,5 +77,15 @@ namespace SnakeGame.Pages.MainPageCategories.View
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text); 
         }
+
+        private void CheckPaste(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (e.Command == ApplicationCommands.Copy ||
+                e.Command == ApplicationCommands.Cut ||
+                e.Command == ApplicationCommands.Paste)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -48,8 +48,6 @@ namespace SnakeGame.GamePages
             controler = new Controler(snake);
         }
 
-
-
         private async Task GameLoop()
         {
             while (!snake.GameOver)

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SnakeGame.Pages.MainPageCategories.ViewModel
 {
-    internal class RecordsViewModel
+    public class RecordsViewModel
     {
+        
     }
 }

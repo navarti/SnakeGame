@@ -5,6 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>disable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -36,8 +37,13 @@
     <None Remove="GamePages\SnakeImages\Red\Empty.png" />
     <None Remove="GamePages\SnakeImages\Red\Food.png" />
     <None Remove="GamePages\SnakeImages\Red\Head.png" />
+    <None Remove="GamePages\SoundEffects\GameOver.wav" />
     <None Remove="ToolsStyles\Images\ShutdownImageDark.png" />
     <None Remove="ToolsStyles\Images\ShutdownImageWhite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,7 +53,8 @@
     <Resource Include="GamePages\SnakeImages\Green\Empty.png" />
     <Resource Include="GamePages\SnakeImages\Green\Food.png" />
     <Resource Include="GamePages\SnakeImages\Green\Head.png" />
-    <Resource Include="GamePages\SnakeImages\icon.ico" />
+    <Resource Include="GamePages\SoundEffects\GameOver.wav" />
+    <Resource Include="icon.ico" />
     <Resource Include="GamePages\SnakeImages\Red\Body.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -77,11 +84,23 @@
     <Compile Update="GamePages\GamePageDraw.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

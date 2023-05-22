@@ -30,9 +30,9 @@ namespace SnakeGame.GamePages
 
         private readonly Dictionary<Field.GridValue, ImageSource> gridValToImage = new()
         {
-            {Field.GridValue.Empty, Images.Empty },
-            {Field.GridValue.Food, Images.Food },
-            {Field.GridValue.Snake, Images.Body }
+            {Field.GridValue.Empty, ImageLoader.Empty },
+            {Field.GridValue.Food, ImageLoader.Food },
+            {Field.GridValue.Snake, ImageLoader.Body }
         };
 
         Image[,] SetupGrid()
@@ -48,7 +48,7 @@ namespace SnakeGame.GamePages
                 {
                     Image image = new Image
                     {
-                        Source = Images.Empty,
+                        Source = ImageLoader.Empty,
                         RenderTransformOrigin = new Point(0.5, 0.5),
                     };
                     images[r, c] = image;
@@ -82,7 +82,7 @@ namespace SnakeGame.GamePages
         {
             Position headPos = snake.HeadPosition();
             Image image = gridImages[headPos.Row, headPos.Col];
-            image.Source = dead ? Images.Deadhead : Images.Head;
+            image.Source = dead ? ImageLoader.Deadhead : ImageLoader.Head;
             int rotation = dirToRotation[snake.Direction];
             image.RenderTransform = new RotateTransform(rotation);
         }
@@ -99,7 +99,7 @@ namespace SnakeGame.GamePages
                     continue;
                 }
                 Position pos = positions[i];
-                ImageSource source = Images.DeadBody;
+                ImageSource source = ImageLoader.DeadBody;
                 gridImages[pos.Row, pos.Col].Source = source;
                 await Task.Delay(50);
             }

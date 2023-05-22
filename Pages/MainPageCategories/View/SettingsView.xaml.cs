@@ -42,6 +42,11 @@ namespace SnakeGame.Pages.MainPageCategories.View
             Properties.Settings.Default.Save();
         }
 
+        private void ChangeSound(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.Sound = !Properties.Settings.Default.Sound;
+        }
+
         private void SnakeColorPrevious(object sender, RoutedEventArgs e)
         {
             for(int i = 0;i < snakeColor.Length-1; i++)

@@ -8,71 +8,84 @@
              d:Height="700" d:Width="1400"
              Background="Transparent">
 
-    
-    
     <Grid>
 
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-
-        <StackPanel Orientation="Horizontal"
-                    Margin="100, 0, 100, 0"
+        <StackPanel Margin="100"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Center">
 
             <TextBlock Style="{StaticResource ColorTextBlock}"
                 Text="Theme"
+                       HorizontalAlignment="Center"
                 FontSize="50"
                 Height="100"/>
-
-            <RadioButton Grid.Row="1"
-                Width="400"
-                Height="100"
-                Margin="300, 0, 0, 0"
-                Click="ChangeTheme"
-                FontSize="50"
-                Content="Click to change"
-                Style="{StaticResource MenuButtonStyle}"/>   
-
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal"
-                    Margin="100, 0, 100, 0"
-                    Grid.Row="1"
-                    VerticalAlignment="Center">
 
             <TextBlock Style="{StaticResource ColorTextBlock}"
                 Text="Snake Color"
                 FontSize="50"
-                VerticalAlignment="Center"/>
-
-            <RadioButton
-                Width="50"
-                Height="50"
-                Margin="200, 0, 0, 0"
-                Click="SnakeColorPrevious"
-                FontSize="50"
-                Content="&lt;&lt;"
-                Style="{StaticResource MenuButtonStyle}"/>
+                       Height="100"
+                       HorizontalAlignment="Center"/>
 
             <TextBlock Style="{StaticResource ColorTextBlock}"
-                VerticalAlignment="Center"
+                Text="Sound"
                 FontSize="50"
-                       Width="150"
-                       TextAlignment="Center"
-                       x:Name="SnakeColorTextBox"
-                       Margin="35"
-                />
-            
-            <RadioButton Grid.Row="1"
-                Width="50"
-                Height="50"
-                Click="SnakeColorNext"
+                       Height="100"
+                       HorizontalAlignment="Center"/>
+
+        </StackPanel>
+
+
+
+        <StackPanel Margin="100"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right">
+
+            <RadioButton
+                Width="400"
+                Height="100"
+                Click="ChangeTheme"
                 FontSize="50"
-                Content="&gt;&gt;"
+                Content="Click to change"
                 Style="{StaticResource MenuButtonStyle}"/>
+
+            
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Height="100">
+
+                <RadioButton
+                    Width="50"
+                    Height="50"
+                    Click="SnakeColorPrevious"
+                    FontSize="50"
+                    Content="&lt;&lt;"
+                    Style="{StaticResource MenuButtonStyle}"/>
+
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                    VerticalAlignment="Center"
+                    FontSize="45"
+                        Width="150"
+                        TextAlignment="Center"
+                        x:Name="SnakeColorTextBox"/>
+
+                <RadioButton Grid.Row="1"
+                    Width="50"
+                    Height="50"
+                    Click="SnakeColorNext"
+                    FontSize="50"
+                    Content="&gt;&gt;"
+                    Style="{StaticResource MenuButtonStyle}"/>
+
+            </StackPanel>
+
+            <RadioButton
+                Width="400"
+                Height="100"
+                Click="ChangeSound"
+                FontSize="50"
+                Content="Click to change"
+                Style="{StaticResource MenuButtonStyle}"/>
+
 
         </StackPanel>
 
