@@ -20,7 +20,7 @@ namespace SnakeGame.GamePages
         enum Mode { User, AI }
         Mode mode = Mode.User;
 
-        private readonly Image[,] gridImages;
+        private Image[,] gridImages;
         Field field;
         Snake snake;
         Controler controler;
@@ -29,23 +29,27 @@ namespace SnakeGame.GamePages
         public GamePage(int rows = 15, int cols = 15)
         {
             InitializeComponent();
-            //this.NavigationCacheMode = 
             field = new Field(rows, cols);
-            snake = new Snake(field);
-            controler = new Controler(snake);
+        }
+
+        public void ChangeDimension(int rows, int cols)
+        {
+            field = new Field(rows, cols); 
             gridImages = SetupGrid();
         }
 
         private async Task RunGame()
         {
+            field = new Field(field.Rows, field.Cols);
+            snake = new Snake(field);
+            controler = new Controler(snake); 
             Draw();
             await ShowCountDown();
             Overlay.Visibility = Visibility.Hidden;
+            BackButton.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
-            field = new Field(field.Rows, field.Cols);
-            snake = new Snake(field);
-            controler = new Controler(snake);
+            
         }
 
         private async Task GameLoop()

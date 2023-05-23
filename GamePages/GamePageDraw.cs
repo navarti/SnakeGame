@@ -37,6 +37,10 @@ namespace SnakeGame.GamePages
 
         Image[,] SetupGrid()
         {
+            while(GameGrid.Children.Count > 0)
+            {
+                GameGrid.Children.RemoveAt(0);
+            }
             Image[,] images = new Image[field.Rows, field.Cols];
             GameGrid.Rows = field.Rows;
             GameGrid.Columns = field.Cols;

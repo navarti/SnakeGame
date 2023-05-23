@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SnakeGame.Pages;
 
 namespace SnakeGame
 {
@@ -21,10 +22,15 @@ namespace SnakeGame
     /// </summary>
     public partial class MainWindow : Window
     {
+        public MainPage Main { get;}
+        public GamePage Game { get;}
+        
         public MainWindow()
         {
+            Main = new MainPage();
+            Game = new GamePage();
             InitializeComponent();
-            Content = new Pages.MainPage();
+            Content = Main;
         }
     }
 }

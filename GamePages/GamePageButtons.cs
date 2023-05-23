@@ -62,15 +62,14 @@ namespace SnakeGame.GamePages
                 "Congratulations! New record!\nPress any key to break it again" : 
                 "Game Over\n Press any key to restart";
             Overlay.Visibility = Visibility.Visible;
+            BackButton.Visibility = Visibility.Visible;
         }
 
 
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {
-            Window window = Window.GetWindow(this);
-            window.Content = new Pages.MainPage();
-            window = null;
-            //NavigationService.Navigate(new MainPage());
+            MainWindow window = (MainWindow)Window.GetWindow(this);
+            window.Content = window.Main;
         }
 
         private void Page_KeyDown(object sender, KeyEventArgs e)
