@@ -29,7 +29,7 @@
                 <view:RecordsView/>
             </DataTemplate>
         </ResourceDictionary>
-    </Page.Resources>  
+    </Page.Resources>
     
     <Grid>
         

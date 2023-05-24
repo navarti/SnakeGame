@@ -1,4 +1,5 @@
 ﻿using SnakeGame.GamePages;
+using SnakeGame.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
     public partial class SettingsView : UserControl
     {
         readonly string[] snakeColor = { "Green", "Red" };
+        
         public SettingsView()
         {
             InitializeComponent();
@@ -45,6 +47,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
         private void ChangeSound(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.Sound = !Properties.Settings.Default.Sound;
+            Settings.Default.Save();
         }
 
         private void SnakeColorPrevious(object sender, RoutedEventArgs e)
@@ -55,6 +58,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
                 {
                     Properties.Settings.Default.SnakeTheme = snakeColor[i+1];
                     SnakeColorTextBox.Text = Properties.Settings.Default.SnakeTheme;
+                    Settings.Default.Save(); 
                     return;
                 }
             }

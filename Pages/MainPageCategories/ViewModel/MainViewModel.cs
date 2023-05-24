@@ -29,7 +29,6 @@ namespace SnakeGame.Pages.MainPageCategories.ViewModel
 
         }
 
-
         public MainViewModel()
         {
             GameVM = new SelectGameViewModel();

@@ -88,5 +88,6 @@ namespace SnakeGame.Pages.MainPageCategories.View
                 e.Handled = true;
             }
         }
+
     }
 }

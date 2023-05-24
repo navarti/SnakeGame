@@ -11,17 +11,36 @@ namespace SnakeGame.GamePages
 {
     public static class ImageLoader
     {
-        static string folder = Settings.Default.SnakeTheme.ToString();
 
-        public readonly static ImageSource Empty = LoadImage("Empty.png");
-        public readonly static ImageSource Body = LoadImage("Body.png");
-        public readonly static ImageSource Head = LoadImage("Head.png");
-        public readonly static ImageSource Food = LoadImage("Food.png");
-        public readonly static ImageSource DeadBody = LoadImage("DeadBody.png");
-        public readonly static ImageSource Deadhead = LoadImage("DeadHead.png");
+        public static ImageSource Empty
+        {
+            get { return LoadImage("Empty.png"); }
+        }
+        public static ImageSource Body
+        {
+            get { return LoadImage("Body.png"); }
+        }
+        public static ImageSource Head
+        {
+            get { return LoadImage("Head.png"); }
+        }
+        public static ImageSource Food
+        {
+            get { return LoadImage("Food.png"); }
+        }
+        public static ImageSource DeadBody
+        {
+            get { return LoadImage("DeadBody.png"); }
+        }
+        public static ImageSource Deadhead 
+        {
+            get { return LoadImage("DeadHead.png"); }
+        }
+        
 
         public static ImageSource LoadImage(string filename)
         {
+            string folder = Settings.Default.SnakeTheme.ToString();
             return new BitmapImage(new Uri($"SnakeImages/{folder}/{filename}", UriKind.Relative));
         }
     }
