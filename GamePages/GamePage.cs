@@ -36,6 +36,7 @@ namespace SnakeGame.GamePages
         {
             field = new Field(rows, cols); 
             gridImages = SetupGrid();
+            mode = Mode.User;
         }
 
         private async Task RunGame()
