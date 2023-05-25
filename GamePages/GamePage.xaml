@@ -44,20 +44,7 @@
                     Grid.Column="0"
                     VerticalAlignment="Center">
 
-            <StackPanel Margin="20" x:Name="LevelSPanel">
-                <TextBlock Style="{StaticResource ColorTextBlock}"
-                           Height="40"
-                   Text="Level"
-                   VerticalAlignment="Center"
-                   FontSize="25"
-                   Margin="20"/>
-
-                <Slider Width="150"
-                    HorizontalAlignment="Left"/>
-
-            </StackPanel>
-
-
+            
             <TextBlock Style="{StaticResource ColorTextBlock}"
                    Text="Score: 0"
                    x:Name="ScoreBlock"
@@ -66,11 +53,12 @@
                    Margin="20"/>
 
 
-            <StackPanel Orientation="Horizontal" Margin="20">
+            <StackPanel Orientation="Horizontal" Margin="20"
+                        x:Name="ModeSPanel">
                 <TextBlock Style="{StaticResource ColorTextBlock}"
                            Height="40"
                    Text="AI"
-                   VerticalAlignment="Center"
+                           VerticalAlignment="Center"
                    FontSize="25"/>
 
                 <CheckBox HorizontalAlignment="Center" 
@@ -84,9 +72,10 @@
 
 
             <StackPanel Margin="20" HorizontalAlignment="Left"
-                        x:Name="AISpeedSPanel">
+                        x:Name="SpeedSPanel">
                 <TextBlock Style="{StaticResource ColorTextBlock}"
                            Height="40"
+                           x:Name="SpeedTextBlock"
                    Text="AI speed"
                    VerticalAlignment="Center"
                            HorizontalAlignment="Center"
@@ -94,7 +83,7 @@
                    Margin="20"/>
 
                 <Slider Width="150"
-                        x:Name="AISlider"
+                        x:Name="SpeedSlider"
                     HorizontalAlignment="Center"/>
 
             </StackPanel>

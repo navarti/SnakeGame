@@ -111,6 +111,9 @@ namespace SnakeGame.GamePages
 
         private async Task ShowCountDown()
         {
+            BackButton.Visibility = Visibility.Hidden;
+            ModeSPanel.Visibility = Visibility.Hidden;
+            if (mode == Mode.User) SpeedSPanel.Visibility = Visibility.Hidden; 
             for (int i = 3; i > 0; i--)
             {
                 OverlayText.Text = i.ToString();
@@ -129,6 +132,8 @@ namespace SnakeGame.GamePages
                 "Game Over\n Press any key to restart";
             Overlay.Visibility = Visibility.Visible;
             BackButton.Visibility = Visibility.Visible;
+            ModeSPanel.Visibility = Visibility.Visible;
+            if (mode == Mode.User) SpeedSPanel.Visibility = Visibility.Visible;
         }
     }
 }

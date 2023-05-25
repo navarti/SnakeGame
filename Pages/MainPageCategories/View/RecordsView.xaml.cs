@@ -67,15 +67,10 @@ namespace SnakeGame.Pages.MainPageCategories.View
         {
             int current_rows=0, current_cols=0;
 
-            if (!int.TryParse(InputRows.Text.ToString(), out current_rows) &&
-                !int.TryParse(InputCols.Text.ToString(), out current_cols))
-                return true;
+            int.TryParse(InputRows.Text.ToString(), out current_rows);
+            int.TryParse(InputCols.Text.ToString(), out current_cols);
 
-            
-
-            //current_rows = int.Parse(InputRows.Text);
-            //current_cols = int.Parse(InputCols.Text);
-            
+            if (current_cols == 0 && current_rows == 0) return true;
             if(current_rows == 0 && all_records[i].cols == current_cols) return true;
             if(current_cols == 0 && all_records[i].rows == current_rows) return true;
             if (current_rows == all_records[i].rows && all_records[i].cols == current_cols) return true;

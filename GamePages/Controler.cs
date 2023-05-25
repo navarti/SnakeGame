@@ -43,6 +43,10 @@ namespace SnakeGame.GamePages
         private Direction GetDirection()
         {
             Position headPos = snake.HeadPosition();
+            if(positions_to_go.Count == 0)
+            {
+                return Direction.Up;
+            }
             Position to_go = positions_to_go.Pop();
 
             Direction[] dirs = { Direction.Left, Direction.Up, Direction.Right, Direction.Down };

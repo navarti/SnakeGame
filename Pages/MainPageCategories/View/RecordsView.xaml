@@ -47,6 +47,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <StackPanel HorizontalAlignment="Center">
@@ -75,11 +76,39 @@
                            TextAlignment="Center"
                            FontSize="25"
                            x:Name="ScoreTB5"/>
-                
+            </StackPanel>
+
+            <StackPanel Grid.Column="1"
+                            HorizontalAlignment="Center">
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           TextAlignment="Center"
+                           FontSize="35"
+                    Text="Level(AI)"/>
+
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           TextAlignment="Center"
+                           FontSize="25"
+                           x:Name="LevelTB1"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           TextAlignment="Center"
+                           FontSize="25"
+                           x:Name="LevelTB2"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           TextAlignment="Center"
+                           FontSize="25"
+                           x:Name="LevelTB3"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           TextAlignment="Center"
+                           FontSize="25"
+                           x:Name="LevelTB4"/>
+                <TextBlock Style="{StaticResource ColorTextBlock}"
+                           TextAlignment="Center"
+                           FontSize="25"
+                           x:Name="LevelTB5"/>
 
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Center" Grid.Column="1">
+            <StackPanel HorizontalAlignment="Center" Grid.Column="2">
                 <TextBlock Style="{StaticResource ColorTextBlock}"
                            TextAlignment="Center"
                            FontSize="35"
@@ -108,7 +137,7 @@
 
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Center" Grid.Column="2">
+            <StackPanel HorizontalAlignment="Center" Grid.Column="3">
                 <TextBlock Style="{StaticResource ColorTextBlock}"
                            TextAlignment="Center"
                            FontSize="35"

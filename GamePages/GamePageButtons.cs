@@ -27,16 +27,22 @@ namespace SnakeGame.GamePages
             if (mode == Mode.User)
             {
                 mode = Mode.AI;
-                LevelSPanel.Visibility = Visibility.Hidden;
-                AISpeedSPanel.Visibility = Visibility.Visible;
+                ChangeSlider(MAX_AI_SPEED, MIN_AI_SPEED, "AI Speed", false);
             }
             else
             {
-                AISpeedSPanel.Visibility = Visibility.Hidden;
-                LevelSPanel.Visibility = Visibility.Visible;
+                ChangeSlider(0, userSpeedLevels.Count-1, "Level", true);
                 mode = Mode.User;
             }
         }
+
+        void ChangeSlider(int min, int max, string text, bool user)
+        {
+            SpeedSlider.Minimum = min;
+            SpeedSlider.Maximum = max;
+            SpeedTextBlock.Text = text;   
+        }
+
         private async void Page_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (Overlay.Visibility == Visibility.Visible)
@@ -91,17 +97,15 @@ namespace SnakeGame.GamePages
             window.KeyDown += Page_KeyDown;
             window.PreviewKeyDown += Page_PreviewKeyDown;
             AICheckBox.IsChecked = false;
-            AISpeedSPanel.Visibility = Visibility.Hidden;
-            AISlider.Minimum = MAX_AI_SPEED;
-            AISlider.Maximum = MIN_AI_SPEED;
-            AISlider.Value = (MIN_AI_SPEED - MAX_AI_SPEED) / 2;
+            SpeedSlider.TickFrequency = 1;
+            SpeedSlider.IsSnapToTickEnabled = true;
+            ChangeSlider(0, userSpeedLevels.Count - 1, "Level", true);
+            SpeedSlider.Value = userSpeedLevels.Count/2;
         }
 
         private void QuitClick(object sender, RoutedEventArgs e)
         {
             Shutdown.ShutdownProg();
         }
-
-
     }
 }
