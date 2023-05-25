@@ -23,10 +23,19 @@ namespace SnakeGame.GamePages
     {
         private void ModeButton(object sender, RoutedEventArgs e)
         {
+            if (gameRunning) return;
             if (mode == Mode.User)
+            {
                 mode = Mode.AI;
+                LevelSPanel.Visibility = Visibility.Hidden;
+                AISpeedSPanel.Visibility = Visibility.Visible;
+            }
             else
+            {
+                AISpeedSPanel.Visibility = Visibility.Hidden;
+                LevelSPanel.Visibility = Visibility.Visible;
                 mode = Mode.User;
+            }
         }
         private async void Page_PreviewKeyDown(object sender, KeyEventArgs e)
         {
@@ -43,33 +52,13 @@ namespace SnakeGame.GamePages
             }
         }
 
-        private async Task ShowCountDown()
-        {
-            for(int i = 3; i > 0; i--)
-            {
-                OverlayText.Text = i.ToString();
-                await Task.Delay(500);
-            }
-        }
-
-        private async Task ShowGameOver()
-        {
-            await DrawDeadSnake();
-            await Task.Delay(0);
-            FileManagment.FileManager fm = new FileManagment.FileManager();
-
-            OverlayText.Text = fm.CheckAndWriteScore(field.Rows, field.Cols, snake.Score) ?
-                "Congratulations! New record!\nPress any key to break it again" : 
-                "Game Over\n Press any key to restart";
-            Overlay.Visibility = Visibility.Visible;
-            BackButton.Visibility = Visibility.Visible;
-        }
-
 
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Window.GetWindow(this);
             window.Content = window.Main;
+            window.KeyDown -= Page_KeyDown;
+            window.PreviewKeyDown -= Page_PreviewKeyDown;
         }
 
         private void Page_KeyDown(object sender, KeyEventArgs e)
@@ -94,14 +83,18 @@ namespace SnakeGame.GamePages
                         break;
                 }
             }
-            
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             var window = Window.GetWindow(this);
             window.KeyDown += Page_KeyDown;
-            window.PreviewKeyDown += Page_PreviewKeyDown; 
+            window.PreviewKeyDown += Page_PreviewKeyDown;
+            AICheckBox.IsChecked = false;
+            AISpeedSPanel.Visibility = Visibility.Hidden;
+            AISlider.Minimum = MAX_AI_SPEED;
+            AISlider.Maximum = MIN_AI_SPEED;
+            AISlider.Value = (MIN_AI_SPEED - MAX_AI_SPEED) / 2;
         }
 
         private void QuitClick(object sender, RoutedEventArgs e)

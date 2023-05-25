@@ -107,7 +107,28 @@ namespace SnakeGame.GamePages
                 gridImages[pos.Row, pos.Col].Source = source;
                 await Task.Delay(50);
             }
+        }
 
+        private async Task ShowCountDown()
+        {
+            for (int i = 3; i > 0; i--)
+            {
+                OverlayText.Text = i.ToString();
+                await Task.Delay(500);
+            }
+        }
+
+        private async Task ShowGameOver()
+        {
+            await DrawDeadSnake();
+            await Task.Delay(0);
+            FileManagment.FileManager fm = new FileManagment.FileManager();
+
+            OverlayText.Text = fm.CheckAndWriteScore(field.Rows, field.Cols, snake.Score) ?
+                "Congratulations! New record!\nPress any key to break it again" :
+                "Game Over\n Press any key to restart";
+            Overlay.Visibility = Visibility.Visible;
+            BackButton.Visibility = Visibility.Visible;
         }
     }
 }

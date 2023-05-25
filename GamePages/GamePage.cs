@@ -20,6 +20,12 @@ namespace SnakeGame.GamePages
         enum Mode { User, AI }
         Mode mode = Mode.User;
 
+        enum Level { Easy=150, Medium=100, Hard=50}
+        Level level = Level.Medium;
+
+        const int MAX_AI_SPEED = 10;
+        const int MIN_AI_SPEED = 150;
+
         private Image[,] gridImages;
         Field field;
         Snake snake;
@@ -50,19 +56,34 @@ namespace SnakeGame.GamePages
             BackButton.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
-            
         }
 
         private async Task GameLoop()
         {
             while (!snake.GameOver)
             {
-                await Task.Delay(20);
+                await Task.Delay(GetDelay());
                 if (mode == Mode.AI)
+
                     controler.Execute();
                 snake.Move();
                 Draw();
             }
+        }
+
+        int GetDelay()
+        {
+            if(mode == Mode.User)
+            {
+                return (int)level;
+            }
+            else
+            {
+              
+                return (int)AISlider.Value;
+            }
+
+
         }
     }
 }
