@@ -40,6 +40,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
             all_records = fm.GetAllRecords();
 
             TextBlock[] scoreBlocks = { ScoreTB1, ScoreTB2, ScoreTB3, ScoreTB4, ScoreTB5 };
+            TextBlock[] levelsBlocks = { LevelTB1, LevelTB2, LevelTB3, LevelTB4, LevelTB5 };
             TextBlock[] dimensionBlocks = { DimensionTB1, DimensionTB2, DimensionTB3, DimensionTB4, DimensionTB5 };
             TextBlock[] dateBlocks = { DateTB1, DateTB2, DateTB3, DateTB4, DateTB5 };
 
@@ -56,6 +57,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
                 if (CheckDimension(i))
                 {
                     scoreBlocks[block_counter].Text = all_records[i].score.ToString();
+                    levelsBlocks[block_counter].Text = all_records[i].level;
                     dimensionBlocks[block_counter].Text = all_records[i].rows.ToString() + 'x' + all_records[i].cols.ToString();
                     dateBlocks[block_counter].Text = all_records[i].dt.ToString();
                     block_counter++;

@@ -35,8 +35,8 @@ namespace SnakeGame.GamePages
         {
             InitializeComponent();
             userSpeedLevels.Add(0, new Tuple<string, int>("Easy", 150));
-            userSpeedLevels.Add(1, new Tuple<string, int>("Easy", 150));
-            userSpeedLevels.Add(2, new Tuple<string, int>("Easy", 150));
+            userSpeedLevels.Add(1, new Tuple<string, int>("Medium", 100));
+            userSpeedLevels.Add(2, new Tuple<string, int>("Hard", 50));
             field = new Field(rows, cols);
         }
 

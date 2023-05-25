@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace SnakeGame.FileManagment
 {
@@ -11,6 +12,8 @@ namespace SnakeGame.FileManagment
     {
         readonly string filename_folder = "scores\\";
         readonly string extension = ".txt";
+
+        readonly string levels = "EasyMediumHardAI";
 
         public FileManager()
         {
@@ -29,37 +32,17 @@ namespace SnakeGame.FileManagment
             for (int i = 0; i < filenames.Length; i++)
             {
                 result[i] = ParseToRead(ReadText(filenames[i]));
-                Tuple<int, int> dimension = ParseFilename(filenames[i]);
-                result[i].rows = dimension.Item1;
-                result[i].cols = dimension.Item2;
             }
             return result;
         }
 
-        Tuple<int, int> ParseFilename(string filename)
+        string ParseFilenameToWrite(int rows, int cols, string level)
         {
-            filename = filename.Substring(filename_folder.Length);
-            filename = filename.Substring(0, filename.IndexOf('.'));
-            string[] data = filename.Split('_');
-
-            int rows=0, cols=0;
-            
-            if (!int.TryParse(data[0], out rows) || !int.TryParse(data[1], out cols))
-            {
-                //
-            }
-
-            return Tuple.Create(rows, cols);
-        }
-
-        string GetFileName(int rows, int cols)
-        {
-            return filename_folder + rows + "_" + cols + extension;
+            return filename_folder + rows + "_" + cols + "_" + level[0] + extension;
         }
 
         string ReadText(string filename)
         {
-            //GetAllRecords();
             string text = "";
             try
             {
@@ -76,7 +59,7 @@ namespace SnakeGame.FileManagment
             return text;
         }
 
-        void WriteText(string text, string filename)
+        void WriteRecord(string text, string filename)
         {
             using (StreamWriter sw = new StreamWriter(filename))
             {
@@ -87,17 +70,38 @@ namespace SnakeGame.FileManagment
         Record ParseToRead(string text)
         {
             Record to_return = new Record();
+
             if(text == "") return to_return;
-            int index_to_split = text.IndexOf(' ');
-            //string[] data = text.Split(' ', 2);
-            string[] data = { text.Substring(0, index_to_split), text.Substring(index_to_split+1)};
             
-            if (!int.TryParse(data[0], out to_return.score))
+            string[] data = text.Split("split");
+
+            if(data.Length != 5)
             {
                 //
             }
-             
-            if(DateTime.TryParse(data[1], out to_return.dt))
+            
+            if (!int.TryParse(data[0], out to_return.rows))
+            {
+                //
+            }
+            
+            if (!int.TryParse(data[1], out to_return.cols))
+            {
+                //
+            }
+            
+            if (!int.TryParse(data[2], out to_return.score))
+            {
+                //
+            }
+
+            to_return.level = data[3];
+            if (levels.IndexOf(data[3]) == -1)
+            {
+                //
+            }
+
+            if (DateTime.TryParse(data[4], out to_return.dt))
             {
                 //
             }
@@ -106,7 +110,7 @@ namespace SnakeGame.FileManagment
 
         string ParseToWrite(Record to_write)
         {
-            return to_write.score + " " + to_write.dt;
+            return to_write.rows + "split" + to_write.cols + "split" + to_write.score + "split" + to_write.level + "split" + to_write.dt;
         }
 
 
@@ -121,19 +125,21 @@ namespace SnakeGame.FileManagment
         //}
 
         //для GamePage
-        public bool CheckAndWriteScore(int rows, int cols, int new_score)
+        public bool CheckAndWriteScore(int rows, int cols, int new_score, string level)
         {
-            GetAllRecords();
-            string filename = GetFileName(rows, cols);
-            int old_score = ParseToRead(ReadText(filename)).score;
+            string filename = ParseFilenameToWrite(rows, cols, level);
+            Record old = ParseToRead(ReadText(filename));
 
-            if(old_score < new_score)
+            if(old.score < new_score && old.level == level)
             {
                 Record new_record = new Record();
+                new_record.rows = rows;
+                new_record.cols = cols;
                 new_record.score = new_score;
+                new_record.level = level;
                 new_record.dt = DateTime.Now;
                 string to_write = ParseToWrite(new_record);
-                WriteText(to_write, filename);
+                WriteRecord(to_write, filename);
                 return true;
             }
 

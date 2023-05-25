@@ -127,7 +127,9 @@ namespace SnakeGame.GamePages
             await Task.Delay(0);
             FileManagment.FileManager fm = new FileManagment.FileManager();
 
-            OverlayText.Text = fm.CheckAndWriteScore(field.Rows, field.Cols, snake.Score) ?
+            string level = mode == Mode.AI ? "AI" : userSpeedLevels[(int)SpeedSlider.Value].Item1;
+
+            OverlayText.Text = fm.CheckAndWriteScore(field.Rows, field.Cols, snake.Score, level) ?
                 "Congratulations! New record!\nPress any key to break it again" :
                 "Game Over\n Press any key to restart";
             Overlay.Visibility = Visibility.Visible;
