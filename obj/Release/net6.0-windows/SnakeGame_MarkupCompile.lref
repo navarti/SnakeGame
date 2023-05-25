@@ -1,4 +1,4 @@
-﻿D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+﻿
 FD:\KPI1-2\курс\snake\SnakeGame\App.xaml;;
 FD:\KPI1-2\курс\snake\SnakeGame\GamePages\GamePage.xaml;;
 FD:\KPI1-2\курс\snake\SnakeGame\GamePages\GameTools.xaml;;
@@ -10,5 +10,6 @@ FD:\KPI1-2\курс\snake\SnakeGame\Pages\MainPageCategories\View\SettingsView.x
 FD:\KPI1-2\курс\snake\SnakeGame\ToolsStyles\ColorToolsStyle.xaml;;
 FD:\KPI1-2\курс\snake\SnakeGame\ToolsStyles\MenuButtonStyle.xaml;;
 FD:\KPI1-2\курс\snake\SnakeGame\ToolsStyles\QuitProgramButton\QuitProgramButtonStyle.xaml;;
+FD:\KPI1-2\курс\snake\SnakeGame\ToolsStyles\SoundButtonStyle.xaml;;
 FD:\KPI1-2\курс\snake\SnakeGame\ToolsStyles\TextBoxStyle.xaml;;
 

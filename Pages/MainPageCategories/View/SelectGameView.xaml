@@ -36,6 +36,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBox x:Name="InputRows"
+                         Style="{StaticResource ColorTextBox}"
                      Width="75"
                          VerticalAlignment="Center"
                          CommandManager.PreviewExecuted="CheckPaste" 
@@ -43,6 +44,7 @@
                 />
 
                 <TextBox x:Name="InputCols"
+                         Style="{StaticResource ColorTextBox}"
                          Grid.Column="1"
                          VerticalAlignment="Center"
                      PreviewTextInput="CheckInput"

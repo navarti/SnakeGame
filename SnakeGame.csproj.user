@@ -39,9 +39,9 @@
     <Page Update="Pages\MainPageCategories\View\SettingsView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ToolsStyles\Colors.xaml">
+    <Resource Update="ToolsStyles\Colors.xaml">
       <SubType>Designer</SubType>
-    </Page>
+    </Resource>
     <Page Update="ToolsStyles\ColorToolsStyle.xaml">
       <SubType>Designer</SubType>
     </Page>

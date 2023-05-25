@@ -130,7 +130,7 @@ namespace SnakeGame.FileManagment
             string filename = ParseFilenameToWrite(rows, cols, level);
             Record old = ParseToRead(ReadText(filename));
 
-            if(old.score < new_score && old.level == level)
+            if((old.score < new_score && old.level == level) || old.level == "")
             {
                 Record new_record = new Record();
                 new_record.rows = rows;

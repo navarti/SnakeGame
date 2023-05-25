@@ -95,7 +95,6 @@ D:\KPI1-2\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.runtimecon
 D:\KPI1-2\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.dll
 D:\KPI1-2\курс\snake\SnakeGame\bin\Debug\net6.0-windows\SnakeGame.pdb
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.csproj.AssemblyReference.cache
-D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\Colors.baml
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPage.g.cs
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\SelectGameView.g.cs
@@ -168,3 +167,4 @@ D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCatego
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\RecordsView.baml
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.Properties.Resources.resources
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.csproj.GenerateResource.cache
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\SoundButtonStyle.baml

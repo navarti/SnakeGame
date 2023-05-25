@@ -78,13 +78,11 @@
 
             </StackPanel>
 
-            <RadioButton
-                Width="400"
+            <Button
+                Style="{StaticResource SoundButton}"
                 Height="100"
                 Click="ChangeSound"
-                FontSize="50"
-                Content="Click to change"
-                Style="{StaticResource MenuButtonStyle}"/>
+                FontSize="50"/>
 
 
         </StackPanel>

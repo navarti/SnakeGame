@@ -51,7 +51,6 @@ D:\KPI1-2\курс\snake\SnakeGame\bin\Release\net6.0-windows\SnakeGame.runtimec
 D:\KPI1-2\курс\snake\SnakeGame\bin\Release\net6.0-windows\SnakeGame.dll
 D:\KPI1-2\курс\snake\SnakeGame\bin\Release\net6.0-windows\SnakeGame.pdb
 D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\SnakeGame.csproj.AssemblyReference.cache
-D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\ToolsStyles\Colors.baml
 D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\GamePages\GamePage.g.cs
 D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\MainWindow.g.cs
 D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\Pages\MainPage.g.cs
@@ -86,3 +85,4 @@ D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\refint\SnakeGame.d
 D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\SnakeGame.pdb
 D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\SnakeGame.genruntimeconfig.cache
 D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\ref\SnakeGame.dll
+D:\KPI1-2\курс\snake\SnakeGame\obj\Release\net6.0-windows\ToolsStyles\SoundButtonStyle.baml

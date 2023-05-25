@@ -40,6 +40,14 @@
     <None Remove="GamePages\SoundEffects\GameOver.wav" />
     <None Remove="ToolsStyles\Images\ShutdownImageDark.png" />
     <None Remove="ToolsStyles\Images\ShutdownImageWhite.png" />
+    <None Remove="ToolsStyles\Images\SoundOffDarkImage.png" />
+    <None Remove="ToolsStyles\Images\SoundOffLightImage.png" />
+    <None Remove="ToolsStyles\Images\SoundOnDarkImage.png" />
+    <None Remove="ToolsStyles\Images\SoundOnLightImage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="ToolsStyles\Colors.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -68,8 +76,13 @@
     <Resource Include="GamePages\SnakeImages\Red\Head.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="ToolsStyles\Colors.xaml" />
     <Resource Include="ToolsStyles\Images\ShutdownImageDark.png" />
     <Resource Include="ToolsStyles\Images\ShutdownImageWhite.png" />
+    <Resource Include="ToolsStyles\Images\SoundOffDarkImage.png" />
+    <Resource Include="ToolsStyles\Images\SoundOffLightImage.png" />
+    <Resource Include="ToolsStyles\Images\SoundOnDarkImage.png" />
+    <Resource Include="ToolsStyles\Images\SoundOnLightImage.png" />
   </ItemGroup>
 
   <ItemGroup>

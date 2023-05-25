@@ -48,6 +48,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
             {
                 scoreBlocks[i].Text = "";
                 dimensionBlocks[i].Text = "";
+                levelsBlocks[i].Text = "";
                 dateBlocks[i].Text = "";
             }
 

@@ -149,7 +149,7 @@ namespace SnakeGame.GamePages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SnakeGame;V1.0.0.0;component/gamepages/gamepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SnakeGame;component/gamepages/gamepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GamePages\GamePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

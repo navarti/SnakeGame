@@ -1,0 +1,79 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:properties="clr-namespace:SnakeGame.Properties"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style TargetType="{x:Type Button}"
+           x:Key="SoundButton">
+
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding Source={x:Static properties:Settings.Default}, Path=Sound}"
+                               Value="True"/>
+                    <Condition Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" 
+                               Value="Light"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Image Source="/ToolsStyles/Images/SoundOnLightImage.png" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding Source={x:Static properties:Settings.Default}, Path=Sound}"
+                               Value="True"/>
+                    <Condition Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" 
+                               Value="Dark"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Image Source="/ToolsStyles/Images/SoundOnDarkImage.png" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding Source={x:Static properties:Settings.Default}, Path=Sound}"
+                               Value="False"/>
+                    <Condition Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" 
+                               Value="Light"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Image Source="/ToolsStyles/Images/SoundOffLightImage.png" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding Source={x:Static properties:Settings.Default}, Path=Sound}"
+                               Value="False"/>
+                    <Condition Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" 
+                               Value="Dark"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Image Source="/ToolsStyles/Images/SoundOffDarkImage.png" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </MultiDataTrigger>
+
+        </Style.Triggers>
+        <Style.Setters>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style.Setters>
+    </Style>
+</ResourceDictionary>

@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="ToolsStyles/TextBoxStyle.xaml"/>
                 <ResourceDictionary Source="ToolsStyles/MenuButtonStyle.xaml"/>
                 <ResourceDictionary Source="ToolsStyles/QuitProgramButton/QuitProgramButtonStyle.xaml"/>
+                <ResourceDictionary Source="ToolsStyles/SoundButtonStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
