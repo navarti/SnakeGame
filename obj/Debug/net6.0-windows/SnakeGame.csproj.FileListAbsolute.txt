@@ -166,6 +166,5 @@ D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\GamePages\GamePage.b
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\GamePages\GameTools.baml
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\RecordsView.g.cs
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCategories\View\RecordsView.baml
-D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame_Content.g.cs
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.Properties.Resources.resources
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.csproj.GenerateResource.cache

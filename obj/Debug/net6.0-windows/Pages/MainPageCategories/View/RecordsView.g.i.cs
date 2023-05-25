@@ -229,7 +229,7 @@ namespace SnakeGame.Pages.MainPageCategories.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SnakeGame;component/pages/mainpagecategories/view/recordsview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SnakeGame;V1.0.0.0;component/pages/mainpagecategories/view/recordsview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\Pages\MainPageCategories\View\RecordsView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

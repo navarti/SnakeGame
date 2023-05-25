@@ -43,10 +43,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="icon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="GamePages\SnakeImages\Green\Body.png" />
     <Resource Include="GamePages\SnakeImages\Green\DeadBody.png" />
     <Resource Include="GamePages\SnakeImages\Green\DeadHead.png" />
@@ -54,7 +50,6 @@
     <Resource Include="GamePages\SnakeImages\Green\Food.png" />
     <Resource Include="GamePages\SnakeImages\Green\Head.png" />
     <Resource Include="GamePages\SoundEffects\GameOver.wav" />
-    <Resource Include="icon.ico" />
     <Resource Include="GamePages\SnakeImages\Red\Body.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
