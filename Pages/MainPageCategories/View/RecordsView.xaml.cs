@@ -25,7 +25,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
     {
         static readonly int GeneralNum = 5;
 
-        Record[] all_records;
+        List<Record> all_records;
         int counter = 0;
         
         public RecordsView()
@@ -53,7 +53,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
             }
 
             int block_counter = 0;
-            for(int i=counter; i<all_records.Length && block_counter < GeneralNum;i++)
+            for(int i=counter; i<all_records.Count && block_counter < GeneralNum;i++)
             {
                 if (CheckDimension(i))
                 {
@@ -82,7 +82,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
 
         private void DimensionPrevious(object sender, RoutedEventArgs e)
         {
-            if(counter + GeneralNum < all_records.Length - 1)
+            if(counter + GeneralNum < all_records.Count - 1)
             {
                 counter += GeneralNum;
                 FillRecords();

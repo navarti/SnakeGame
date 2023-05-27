@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Windows;
+using System.Windows.Documents;
+using System.Windows.Interop;
+using System.Windows.Threading;
 
 namespace SnakeGame.FileManagment
 {
@@ -21,17 +25,28 @@ namespace SnakeGame.FileManagment
             {
                 DirectoryInfo di = Directory.CreateDirectory(filename_folder);
                 di.Attributes = FileAttributes.Directory | FileAttributes.Hidden;
+                //MessageBox.Show("New folder with records have been created. Go ahead to be the top!");
+                Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
+                dispatcher.BeginInvoke(new Action(() => MessageBox.Show("New folder with records have been created. Go ahead to be the top!")));
             }
         }
 
 
-        public Record[] GetAllRecords()
+        public List<Record> GetAllRecords()
         {
             string[] filenames = Directory.GetFiles(filename_folder);
-            Record[] result = new Record[filenames.Length];
+            List<Record> result = new List<Record>();
             for (int i = 0; i < filenames.Length; i++)
             {
-                result[i] = ParseToRead(ReadText(filenames[i]));
+                try
+                {
+                    result.Add(ParseToRead(ReadText(filenames[i])));
+                }
+                catch (Exception)
+                {
+                    Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
+                    dispatcher.BeginInvoke(new Action(() => MessageBox.Show($"The file {filenames[i]} was damaged. The data was deleted")));
+                }
             }
             return result;
         }
@@ -43,7 +58,7 @@ namespace SnakeGame.FileManagment
 
         string ReadText(string filename)
         {
-            string text = "";
+            string text;
             try
             {
                 using (StreamReader sr = new StreamReader(filename))
@@ -54,7 +69,7 @@ namespace SnakeGame.FileManagment
 
             catch (Exception ex)
             {
-                //throw new Exception();
+                text = "new_file";
             }
             return text;
         }
@@ -71,39 +86,39 @@ namespace SnakeGame.FileManagment
         {
             Record to_return = new Record();
 
-            if(text == "") return to_return;
+            if(text == "new_file") return to_return;
             
             string[] data = text.Split("split");
 
             if(data.Length != 5)
             {
-                //
+                throw new Exception();
             }
             
             if (!int.TryParse(data[0], out to_return.rows))
             {
-                //
+                throw new Exception();
             }
             
             if (!int.TryParse(data[1], out to_return.cols))
             {
-                //
+                throw new Exception();
             }
             
             if (!int.TryParse(data[2], out to_return.score))
             {
-                //
+                throw new Exception();
             }
 
             to_return.level = data[3];
             if (levels.IndexOf(data[3]) == -1)
             {
-                //
+                throw new Exception();
             }
 
-            if (DateTime.TryParse(data[4], out to_return.dt))
+            if (!DateTime.TryParse(data[4], out to_return.dt))
             {
-                //
+                throw new Exception();
             }
             return to_return;
         }
@@ -114,23 +129,24 @@ namespace SnakeGame.FileManagment
         }
 
 
-        ////для GamePage
-        //public Record GetScore(int rows, int cols)
-        //{
-        //    string filename = GetFileName(rows, cols);
-        //    Record to_return = ParseToRead(ReadText(filename));
-        //    to_return.rows = rows;
-        //    to_return.cols = cols;
-        //    return to_return;
-        //}
-
         //для GamePage
         public bool CheckAndWriteScore(int rows, int cols, int new_score, string level)
         {
             string filename = ParseFilenameToWrite(rows, cols, level);
-            Record old = ParseToRead(ReadText(filename));
+            Record old = new Record();
 
-            if((old.score < new_score && old.level == level) || old.level == "")
+            bool overWrite = false;
+            try
+            {
+                old = ParseToRead(ReadText(filename));
+            }
+            catch (Exception ex)
+            {
+                overWrite = true;
+                MessageBox.Show("File with current record was damaged and will be overwritten with this score");
+            }
+
+            if ((old.score < new_score && old.level == level) || overWrite || old.level == "")
             {
                 Record new_record = new Record();
                 new_record.rows = rows;
@@ -142,7 +158,6 @@ namespace SnakeGame.FileManagment
                 WriteRecord(to_write, filename);
                 return true;
             }
-
             return false;
         }
     }
