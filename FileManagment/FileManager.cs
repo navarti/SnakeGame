@@ -1,7 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -15,7 +20,7 @@ namespace SnakeGame.FileManagment
     internal class FileManager
     {
         readonly string filename_folder = "scores\\";
-        readonly string extension = ".txt";
+        readonly string extension = ".bin";
 
         readonly string levels = "EasyMediumHardAI";
 
@@ -25,7 +30,6 @@ namespace SnakeGame.FileManagment
             {
                 DirectoryInfo di = Directory.CreateDirectory(filename_folder);
                 di.Attributes = FileAttributes.Directory | FileAttributes.Hidden;
-                //MessageBox.Show("New folder with records have been created. Go ahead to be the top!");
                 Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
                 dispatcher.BeginInvoke(new Action(() => MessageBox.Show("New folder with records have been created. Go ahead to be the top!")));
             }
@@ -40,7 +44,7 @@ namespace SnakeGame.FileManagment
             {
                 try
                 {
-                    result.Add(ParseToRead(ReadText(filenames[i])));
+                    result.Add(ReadRecord(filenames[i]));
                 }
                 catch (Exception)
                 {
@@ -56,78 +60,71 @@ namespace SnakeGame.FileManagment
             return filename_folder + rows + "_" + cols + "_" + level[0] + extension;
         }
 
-        string ReadText(string filename)
+
+        [SecurityCritical]
+        [HandleProcessCorruptedStateExceptions]
+        Record ReadRecord(string filename)
         {
-            string text;
+            if (!File.Exists(filename))
+            {
+                return new Record();
+            }
+            File.SetAttributes(filename, FileAttributes.Normal);
+
+            byte[] buffer = new byte[Marshal.SizeOf(typeof(Record))];
             try
             {
-                using (StreamReader sr = new StreamReader(filename))
-                {
-                    text = sr.ReadLine();
-                }
+                Record toReturn = new Record();
+                FileStream fs = new FileStream(filename, FileMode.Open);
+                fs.Read(buffer, 0, buffer.Length);
+                GCHandle handle = GCHandle.Alloc(buffer, GCHandleType.Pinned);
+                toReturn = (Record)Marshal.PtrToStructure(handle.AddrOfPinnedObject(),
+                                                        typeof(Record));
+                handle.Free();
+                if (fs.Position >= fs.Length)
+                    fs.Close();
+                File.SetAttributes(filename, FileAttributes.ReadOnly | FileAttributes.Hidden);
+                return toReturn;
             }
-
             catch (Exception ex)
             {
-                text = "new_file";
+                throw ex;
             }
-            return text;
         }
 
-        void WriteRecord(string text, string filename)
+        bool WriteRecord(Record record, string filename)
         {
-            using (StreamWriter sw = new StreamWriter(filename))
+            try
             {
-                sw.Write(text);
+                byte[] buf = StructToByteArray(record);
+                FileStream fs = new FileStream(filename, FileMode.Create);
+                BinaryWriter bw = new BinaryWriter(fs);
+                bw.Write(buf);
+                bw.Close();
+                bw = null;
             }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
         }
 
-        Record ParseToRead(string text)
+        private byte[] StructToByteArray(Record to_convert)
         {
-            Record to_return = new Record();
-
-            if(text == "new_file") return to_return;
-            
-            string[] data = text.Split("split");
-
-            if(data.Length != 5)
+            try
             {
-                throw new Exception();
+                byte[] buffer = new byte[Marshal.SizeOf(to_convert)];
+                GCHandle h = GCHandle.Alloc(buffer, GCHandleType.Pinned);
+                Marshal.StructureToPtr(to_convert, h.AddrOfPinnedObject(), false);
+                h.Free(); 
+                return buffer; 
             }
-            
-            if (!int.TryParse(data[0], out to_return.rows))
+            catch (Exception ex)
             {
-                throw new Exception();
+                throw ex;
             }
-            
-            if (!int.TryParse(data[1], out to_return.cols))
-            {
-                throw new Exception();
-            }
-            
-            if (!int.TryParse(data[2], out to_return.score))
-            {
-                throw new Exception();
-            }
-
-            to_return.level = data[3];
-            if (levels.IndexOf(data[3]) == -1)
-            {
-                throw new Exception();
-            }
-
-            if (!DateTime.TryParse(data[4], out to_return.dt))
-            {
-                throw new Exception();
-            }
-            return to_return;
         }
-
-        string ParseToWrite(Record to_write)
-        {
-            return to_write.rows + "split" + to_write.cols + "split" + to_write.score + "split" + to_write.level + "split" + to_write.dt;
-        }
-
 
         //для GamePage
         public bool CheckAndWriteScore(int rows, int cols, int new_score, string level)
@@ -138,7 +135,7 @@ namespace SnakeGame.FileManagment
             bool overWrite = false;
             try
             {
-                old = ParseToRead(ReadText(filename));
+                old = ReadRecord(filename);
             }
             catch (Exception ex)
             {
@@ -154,8 +151,7 @@ namespace SnakeGame.FileManagment
                 new_record.score = new_score;
                 new_record.level = level;
                 new_record.dt = DateTime.Now;
-                string to_write = ParseToWrite(new_record);
-                WriteRecord(to_write, filename);
+                WriteRecord(new_record, filename);
                 return true;
             }
             return false;
