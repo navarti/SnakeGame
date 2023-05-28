@@ -6,14 +6,15 @@
     <SolidColorBrush x:Key="DarkForegroundPage" Color="White" />
     <SolidColorBrush x:Key="DarkTextBox" Color="#353340" />
     <SolidColorBrush x:Key="DarkMenuButtonIsMouseOver" Color="#22202f" />
+    <SolidColorBrush x:Key="DarkGridBackgroundColor">#312C40</SolidColorBrush>
     
-
 
     <SolidColorBrush x:Key="LightBackgroundPage" Color="#939393" />
     <SolidColorBrush x:Key="LightForegroundPage" Color="#272537" />
     <SolidColorBrush x:Key="LightTextBox" Color="#353340" />
-    <SolidColorBrush x:Key="LightMenuButtonIsMouseOver" Color="#7C7F7C" /> 
-    
+    <SolidColorBrush x:Key="LightMenuButtonIsMouseOver" Color="#7C7F7C" />
+    <SolidColorBrush x:Key="LightGridBackgroundColor">#312C40</SolidColorBrush>
+
     <!--<SolidColorBrush x:Key="" Color="#555555" />
     <SolidColorBrush x:Key="ReadOnlyTextBrush" Color="#555555" />
     <SolidColorBrush x:Key="ReadOnlyTextBrush" Color="#555555" />-->

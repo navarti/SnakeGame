@@ -44,7 +44,7 @@
                     Grid.Column="0"
                     VerticalAlignment="Center">
 
-            
+
             <TextBlock Style="{StaticResource ColorTextBlock}"
                    Text="Score: 0"
                    x:Name="ScoreBlock"
@@ -100,7 +100,6 @@
                 Margin="25"
                 Click="QuitClick"
                 Style="{StaticResource QuitProgramButton}"/>
-
 
         <Border Grid.Column="1"
                 Style="{StaticResource ColorBorder}"

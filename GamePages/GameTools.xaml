@@ -2,29 +2,17 @@
                     xmlns:properties="clr-namespace:SnakeGame.Properties"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <SolidColorBrush x:Key="BackgroundColor">#211E2B</SolidColorBrush>
-    <SolidColorBrush x:Key="GridBackgroundColor">#312C40</SolidColorBrush>
+  
     <SolidColorBrush x:Key="GridLineColor">#4F4867</SolidColorBrush>
-    <SolidColorBrush x:Key="TextColor">White</SolidColorBrush>
     <SolidColorBrush x:Key="OverlayColor">#7F000000</SolidColorBrush>
-    
+
     <Style TargetType="Border"
            x:Key="ColorBorder">
 
         <Setter Property="Width" Value="800"/>
         <Setter Property="Height" Value="800"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GridLineColor}"/>
 
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
-                         Value="Dark">
-                <Setter Property="BorderBrush" Value="{StaticResource GridLineColor}"/>
-            </DataTrigger>
-
-            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
-                         Value="Light">
-                <Setter Property="BorderBrush" Value="{StaticResource GridLineColor}"/>
-            </DataTrigger>
-        </Style.Triggers>
     </Style>
 
     <Style TargetType="UniformGrid"
@@ -32,16 +20,16 @@
 
         <Setter Property="Width" Value="800"/>
         <Setter Property="Height" Value="800"/>
-        
+
         <Style.Triggers>
             <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
                          Value="Dark">
-                <Setter Property="Background" Value="{StaticResource GridBackgroundColor}"/>
+                <Setter Property="Background" Value="{StaticResource DarkGridBackgroundColor}"/>
             </DataTrigger>
 
             <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}"
                          Value="Light">
-                <Setter Property="Background" Value="{StaticResource GridBackgroundColor}"/>
+                <Setter Property="Background" Value="{StaticResource LightGridBackgroundColor}"/>
             </DataTrigger>
         </Style.Triggers>
     </Style>
