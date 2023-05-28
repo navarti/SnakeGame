@@ -25,6 +25,14 @@ namespace SnakeGame.Pages.MainPageCategories.View
     {
         static readonly int GeneralNum = 5;
 
+        static readonly Dictionary<char, string> levelDict = new Dictionary<char, string>
+        {
+            {'E', "easy" },
+            {'M', "medium" },
+            {'H', "hard"},
+            {'A', "AI" }
+        };
+
         List<Record> all_records;
         int counter = 0;
         
@@ -58,7 +66,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
                 if (CheckDimension(i))
                 {
                     scoreBlocks[block_counter].Text = all_records[i].score.ToString();
-                    levelsBlocks[block_counter].Text = all_records[i].level;
+                    levelsBlocks[block_counter].Text = levelDict[all_records[i].level];
                     dimensionBlocks[block_counter].Text = all_records[i].rows.ToString() + 'x' + all_records[i].cols.ToString();
                     dateBlocks[block_counter].Text = all_records[i].dt.ToString();
                     block_counter++;

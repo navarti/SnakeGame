@@ -22,8 +22,8 @@ namespace SnakeGame.Pages.MainPageCategories.View
     /// </summary>
     public partial class SettingsView : UserControl
     {
-        readonly string[] snakeColor = { "Green", "Red" };
-        
+        readonly string[] snakeColor = { "Green", "Red", "Yellow"};
+
         public SettingsView()
         {
             InitializeComponent();

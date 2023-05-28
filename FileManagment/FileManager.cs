@@ -22,8 +22,6 @@ namespace SnakeGame.FileManagment
         readonly string filename_folder = "scores\\";
         readonly string extension = ".bin";
 
-        readonly string levels = "EasyMediumHardAI";
-
         public FileManager()
         {
             if (!Directory.Exists(filename_folder))
@@ -61,8 +59,6 @@ namespace SnakeGame.FileManagment
         }
 
 
-        [SecurityCritical]
-        [HandleProcessCorruptedStateExceptions]
         Record ReadRecord(string filename)
         {
             if (!File.Exists(filename))
@@ -74,17 +70,12 @@ namespace SnakeGame.FileManagment
             byte[] buffer = new byte[Marshal.SizeOf(typeof(Record))];
             try
             {
-                Record toReturn = new Record();
                 FileStream fs = new FileStream(filename, FileMode.Open);
                 fs.Read(buffer, 0, buffer.Length);
-                GCHandle handle = GCHandle.Alloc(buffer, GCHandleType.Pinned);
-                toReturn = (Record)Marshal.PtrToStructure(handle.AddrOfPinnedObject(),
-                                                        typeof(Record));
-                handle.Free();
-                if (fs.Position >= fs.Length)
-                    fs.Close();
+                fs.Close();
+
                 File.SetAttributes(filename, FileAttributes.ReadOnly | FileAttributes.Hidden);
-                return toReturn;
+                return Record.ToStruct(buffer);
             }
             catch (Exception ex)
             {
@@ -96,7 +87,7 @@ namespace SnakeGame.FileManagment
         {
             try
             {
-                byte[] buf = StructToByteArray(record);
+                byte[] buf = Record.StructToByteArray(record);
                 FileStream fs = new FileStream(filename, FileMode.Create);
                 BinaryWriter bw = new BinaryWriter(fs);
                 bw.Write(buf);
@@ -110,21 +101,7 @@ namespace SnakeGame.FileManagment
             return true;
         }
 
-        private byte[] StructToByteArray(Record to_convert)
-        {
-            try
-            {
-                byte[] buffer = new byte[Marshal.SizeOf(to_convert)];
-                GCHandle h = GCHandle.Alloc(buffer, GCHandleType.Pinned);
-                Marshal.StructureToPtr(to_convert, h.AddrOfPinnedObject(), false);
-                h.Free(); 
-                return buffer; 
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        
 
         //для GamePage
         public bool CheckAndWriteScore(int rows, int cols, int new_score, string level)
@@ -143,13 +120,13 @@ namespace SnakeGame.FileManagment
                 MessageBox.Show("File with current record was damaged and will be overwritten with this score");
             }
 
-            if ((old.score < new_score && old.level == level) || overWrite || old.level == "")
+            if ((old.score < new_score && old.level == level[0]) || overWrite || old.level == ' ')
             {
                 Record new_record = new Record();
                 new_record.rows = rows;
                 new_record.cols = cols;
                 new_record.score = new_score;
-                new_record.level = level;
+                new_record.level = level[0];
                 new_record.dt = DateTime.Now;
                 WriteRecord(new_record, filename);
                 return true;

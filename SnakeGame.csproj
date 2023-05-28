@@ -37,6 +37,12 @@
     <None Remove="GamePages\SnakeImages\Red\Empty.png" />
     <None Remove="GamePages\SnakeImages\Red\Food.png" />
     <None Remove="GamePages\SnakeImages\Red\Head.png" />
+    <None Remove="GamePages\SnakeImages\Yellow\Body.png" />
+    <None Remove="GamePages\SnakeImages\Yellow\DeadBody.png" />
+    <None Remove="GamePages\SnakeImages\Yellow\DeadHead.png" />
+    <None Remove="GamePages\SnakeImages\Yellow\Empty.png" />
+    <None Remove="GamePages\SnakeImages\Yellow\Food.png" />
+    <None Remove="GamePages\SnakeImages\Yellow\Head.png" />
     <None Remove="GamePages\SoundEffects\GameOver.wav" />
     <None Remove="ToolsStyles\Images\ShutdownImageDark.png" />
     <None Remove="ToolsStyles\Images\ShutdownImageWhite.png" />
@@ -57,6 +63,12 @@
     <Resource Include="GamePages\SnakeImages\Green\Empty.png" />
     <Resource Include="GamePages\SnakeImages\Green\Food.png" />
     <Resource Include="GamePages\SnakeImages\Green\Head.png" />
+    <Resource Include="GamePages\SnakeImages\Yellow\Body.png" />
+    <Resource Include="GamePages\SnakeImages\Yellow\DeadBody.png" />
+    <Resource Include="GamePages\SnakeImages\Yellow\DeadHead.png" />
+    <Resource Include="GamePages\SnakeImages\Yellow\Empty.png" />
+    <Resource Include="GamePages\SnakeImages\Yellow\Food.png" />
+    <Resource Include="GamePages\SnakeImages\Yellow\Head.png" />
     <Resource Include="GamePages\SoundEffects\GameOver.wav" />
     <Resource Include="GamePages\SnakeImages\Red\Body.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
