@@ -23,8 +23,8 @@ namespace SnakeGame.Pages.MainPageCategories.View
     /// </summary>
     public partial class SelectGameView : UserControl
     {
-        readonly int MIN_DIMENSION = 5;
-        readonly int MAX_DIMENSION = 50;
+        public static readonly int MIN_DIMENSION = 5;
+        public static readonly int MAX_DIMENSION = 50;
         public SelectGameView()
         {
             InitializeComponent();

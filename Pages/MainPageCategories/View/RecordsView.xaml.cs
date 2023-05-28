@@ -25,11 +25,11 @@ namespace SnakeGame.Pages.MainPageCategories.View
     {
         static readonly int GeneralNum = 5;
 
-        static readonly Dictionary<char, string> levelDict = new Dictionary<char, string>
+        public static readonly Dictionary<char, string> levelDict = new Dictionary<char, string>
         {
-            {'E', "easy" },
-            {'M', "medium" },
-            {'H', "hard"},
+            {'E', "Easy" },
+            {'M', "Medium" },
+            {'H', "Hard"},
             {'A', "AI" }
         };
 
@@ -45,7 +45,14 @@ namespace SnakeGame.Pages.MainPageCategories.View
         void FillRecords()
         {
             FileManager fm = new FileManager();
-            all_records = fm.GetAllRecords();
+            try
+            {
+                all_records = fm.GetAllRecords();
+            }
+            catch (Exception)
+            {
+                FillRecords();
+            }
 
             TextBlock[] scoreBlocks = { ScoreTB1, ScoreTB2, ScoreTB3, ScoreTB4, ScoreTB5 };
             TextBlock[] levelsBlocks = { LevelTB1, LevelTB2, LevelTB3, LevelTB4, LevelTB5 };

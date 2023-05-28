@@ -20,7 +20,12 @@ namespace SnakeGame.GamePages
         enum Mode { User, AI }
         Mode mode = Mode.User;
 
-        readonly Dictionary<int, Tuple<string, int>> userSpeedLevels = new Dictionary<int, Tuple<string, int>>();
+        static readonly Dictionary<int, Tuple<string, int>> userSpeedLevels = new Dictionary<int, Tuple<string, int>>
+        {
+            {0, new Tuple<string, int>("Easy", 150)},
+            {1, new Tuple<string, int>("Medium", 100)},
+            {2, new Tuple<string, int>("Hard", 50)}
+        };
 
         const int MAX_AI_SPEED = 10;
         const int MIN_AI_SPEED = 150;
@@ -34,9 +39,6 @@ namespace SnakeGame.GamePages
         public GamePage(int rows = 15, int cols = 15)
         {
             InitializeComponent();
-            userSpeedLevels.Add(0, new Tuple<string, int>("Easy", 150));
-            userSpeedLevels.Add(1, new Tuple<string, int>("Medium", 100));
-            userSpeedLevels.Add(2, new Tuple<string, int>("Hard", 50));
             field = new Field(rows, cols);
         }
 

@@ -13,6 +13,7 @@ using System.Web;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Interop;
+using System.Windows.Navigation;
 using System.Windows.Threading;
 
 namespace SnakeGame.FileManagment
@@ -34,6 +35,7 @@ namespace SnakeGame.FileManagment
         }
 
 
+        // для Records
         public List<Record> GetAllRecords()
         {
             string[] filenames = Directory.GetFiles(filename_folder);
@@ -46,8 +48,12 @@ namespace SnakeGame.FileManagment
                 }
                 catch (Exception)
                 {
+                    File.SetAttributes(filenames[i], FileAttributes.Normal);
+                    //File.Delete(filenames[i]);
                     Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
                     dispatcher.BeginInvoke(new Action(() => MessageBox.Show($"The file {filenames[i]} was damaged. The data was deleted")));
+                    throw new Exception("Damaged file");
+                    return result;
                 }
             }
             return result;
@@ -68,31 +74,32 @@ namespace SnakeGame.FileManagment
             File.SetAttributes(filename, FileAttributes.Normal);
 
             byte[] buffer = new byte[Marshal.SizeOf(typeof(Record))];
-            try
-            {
-                FileStream fs = new FileStream(filename, FileMode.Open);
-                fs.Read(buffer, 0, buffer.Length);
-                fs.Close();
+            
+            FileStream fs = new FileStream(filename, FileMode.Open);
+            fs.Read(buffer, 0, buffer.Length);
+            fs.Close();
 
-                File.SetAttributes(filename, FileAttributes.ReadOnly | FileAttributes.Hidden);
-                return Record.ToStruct(buffer);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            File.SetAttributes(filename, FileAttributes.ReadOnly | FileAttributes.Hidden);
+            Record to_return = Record.ToStruct(buffer);
+            to_return.Validate();
+            return to_return;
         }
 
         bool WriteRecord(Record record, string filename)
         {
             try
             {
+                if (File.Exists(filename))
+                {
+                    File.SetAttributes(filename, FileAttributes.Normal);
+                }
                 byte[] buf = Record.StructToByteArray(record);
                 FileStream fs = new FileStream(filename, FileMode.Create);
                 BinaryWriter bw = new BinaryWriter(fs);
                 bw.Write(buf);
                 bw.Close();
                 bw = null;
+                File.SetAttributes(filename, FileAttributes.ReadOnly | FileAttributes.Hidden);
             }
             catch (Exception ex)
             {

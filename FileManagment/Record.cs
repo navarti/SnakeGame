@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
@@ -42,6 +43,30 @@ namespace SnakeGame.FileManagment
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public void Validate()
+        {
+            if (rows < SnakeGame.Pages.MainPageCategories.View.SelectGameView.MIN_DIMENSION ||
+                cols < SnakeGame.Pages.MainPageCategories.View.SelectGameView.MIN_DIMENSION ||
+                rows > SnakeGame.Pages.MainPageCategories.View.SelectGameView.MAX_DIMENSION ||
+                cols > SnakeGame.Pages.MainPageCategories.View.SelectGameView.MAX_DIMENSION)
+            {
+                throw new Exception("Invalid dimensions");
+            }
+
+            else if (score < 0 || score > rows * cols)
+            {
+                throw new Exception("Invalid score");
+            }
+            else if (dt.Year < 2023 || dt.Year > 2100)
+            {
+                throw new Exception("Invalid year");
+            }
+            else if (!SnakeGame.Pages.MainPageCategories.View.RecordsView.levelDict.ContainsKey(level))
+            {
+                throw new Exception("Invalid level");
             }
         }
     }
