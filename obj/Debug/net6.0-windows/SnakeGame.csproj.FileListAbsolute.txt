@@ -112,7 +112,6 @@ D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\ColorToo
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\MenuButtonStyle.baml
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\QuitProgramButton\QuitProgramButtonStyle.baml
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\TextBoxStyle.baml
-D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.g.resources
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.GeneratedMSBuildEditorConfig.editorconfig
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfoInputs.cache
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.AssemblyInfo.cs
@@ -168,3 +167,4 @@ D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\Pages\MainPageCatego
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.Properties.Resources.resources
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.csproj.GenerateResource.cache
 D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\ToolsStyles\SoundButtonStyle.baml
+D:\KPI1-2\курс\snake\SnakeGame\obj\Debug\net6.0-windows\SnakeGame.g.resources

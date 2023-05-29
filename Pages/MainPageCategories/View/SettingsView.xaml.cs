@@ -22,12 +22,12 @@ namespace SnakeGame.Pages.MainPageCategories.View
     /// </summary>
     public partial class SettingsView : UserControl
     {
-        readonly string[] snakeColor = { "Green", "Red", "Yellow"};
+        readonly string[] snakeColor = {"Gray", "Green", "Yellow", "Blue"};
 
         public SettingsView()
         {
             InitializeComponent();
-            SnakeColorTextBox.Text = Properties.Settings.Default.SnakeTheme;
+            SnakeColorTextBox.Text =  Properties.Settings.Default.SnakeTheme;
         }
 
         private void ChangeTheme(object sender, RoutedEventArgs e)

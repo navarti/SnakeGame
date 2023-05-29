@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Light</Value>
     </Setting>
     <Setting Name="SnakeTheme" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Red</Value>
+      <Value Profile="(Default)">Green</Value>
     </Setting>
     <Setting Name="Sound" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

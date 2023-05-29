@@ -49,7 +49,7 @@ namespace SnakeGame.FileManagment
                 catch (Exception)
                 {
                     File.SetAttributes(filenames[i], FileAttributes.Normal);
-                    //File.Delete(filenames[i]);
+                    File.Delete(filenames[i]);
                     Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
                     dispatcher.BeginInvoke(new Action(() => MessageBox.Show($"The file {filenames[i]} was damaged. The data was deleted")));
                     throw new Exception("Damaged file");
@@ -58,6 +58,7 @@ namespace SnakeGame.FileManagment
             }
             return result;
         }
+
 
         string ParseFilenameToWrite(int rows, int cols, string level)
         {

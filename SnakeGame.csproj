@@ -24,6 +24,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="GamePages\SnakeImages\Blue\Body.png" />
+    <None Remove="GamePages\SnakeImages\Blue\DeadBody.png" />
+    <None Remove="GamePages\SnakeImages\Blue\DeadHead.png" />
+    <None Remove="GamePages\SnakeImages\Blue\Empty.png" />
+    <None Remove="GamePages\SnakeImages\Blue\Food.png" />
+    <None Remove="GamePages\SnakeImages\Blue\Head.png" />
+    <None Remove="GamePages\SnakeImages\Gray\Body.png" />
+    <None Remove="GamePages\SnakeImages\Gray\DeadBody.png" />
+    <None Remove="GamePages\SnakeImages\Gray\DeadHead.png" />
+    <None Remove="GamePages\SnakeImages\Gray\Empty.png" />
+    <None Remove="GamePages\SnakeImages\Gray\Food.png" />
+    <None Remove="GamePages\SnakeImages\Gray\Head.png" />
     <None Remove="GamePages\SnakeImages\Green\Body.png" />
     <None Remove="GamePages\SnakeImages\Green\DeadBody.png" />
     <None Remove="GamePages\SnakeImages\Green\DeadHead.png" />
@@ -31,12 +43,6 @@
     <None Remove="GamePages\SnakeImages\Green\Food.png" />
     <None Remove="GamePages\SnakeImages\Green\Head.png" />
     <None Remove="GamePages\SnakeImages\Green\icon.ico" />
-    <None Remove="GamePages\SnakeImages\Red\Body.png" />
-    <None Remove="GamePages\SnakeImages\Red\DeadBody.png" />
-    <None Remove="GamePages\SnakeImages\Red\DeadHead.png" />
-    <None Remove="GamePages\SnakeImages\Red\Empty.png" />
-    <None Remove="GamePages\SnakeImages\Red\Food.png" />
-    <None Remove="GamePages\SnakeImages\Red\Head.png" />
     <None Remove="GamePages\SnakeImages\Yellow\Body.png" />
     <None Remove="GamePages\SnakeImages\Yellow\DeadBody.png" />
     <None Remove="GamePages\SnakeImages\Yellow\DeadHead.png" />
@@ -57,6 +63,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="GamePages\SnakeImages\Blue\Body.png" />
+    <Resource Include="GamePages\SnakeImages\Blue\DeadBody.png" />
+    <Resource Include="GamePages\SnakeImages\Blue\DeadHead.png" />
+    <Resource Include="GamePages\SnakeImages\Blue\Empty.png" />
+    <Resource Include="GamePages\SnakeImages\Blue\Food.png" />
+    <Resource Include="GamePages\SnakeImages\Blue\Head.png" />
+    <Resource Include="GamePages\SnakeImages\Gray\Body.png" />
+    <Resource Include="GamePages\SnakeImages\Gray\DeadBody.png" />
+    <Resource Include="GamePages\SnakeImages\Gray\DeadHead.png" />
+    <Resource Include="GamePages\SnakeImages\Gray\Empty.png" />
+    <Resource Include="GamePages\SnakeImages\Gray\Food.png" />
+    <Resource Include="GamePages\SnakeImages\Gray\Head.png" />
     <Resource Include="GamePages\SnakeImages\Green\Body.png" />
     <Resource Include="GamePages\SnakeImages\Green\DeadBody.png" />
     <Resource Include="GamePages\SnakeImages\Green\DeadHead.png" />
@@ -70,24 +88,6 @@
     <Resource Include="GamePages\SnakeImages\Yellow\Food.png" />
     <Resource Include="GamePages\SnakeImages\Yellow\Head.png" />
     <Resource Include="GamePages\SoundEffects\GameOver.wav" />
-    <Resource Include="GamePages\SnakeImages\Red\Body.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="GamePages\SnakeImages\Red\DeadBody.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="GamePages\SnakeImages\Red\DeadHead.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="GamePages\SnakeImages\Red\Empty.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="GamePages\SnakeImages\Red\Food.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="GamePages\SnakeImages\Red\Head.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="ToolsStyles\Colors.xaml" />
     <Resource Include="ToolsStyles\Images\ShutdownImageDark.png" />
     <Resource Include="ToolsStyles\Images\ShutdownImageWhite.png" />
