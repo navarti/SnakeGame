@@ -2,12 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Xml.Linq;
 using static SnakeGame.GamePages.Field;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace SnakeGame.GamePages
 {
@@ -67,59 +70,111 @@ namespace SnakeGame.GamePages
             List<Position> all = new List<Position>(snake.SField.EmptyPositions());
             all.Add(to);
 
-            List<Position> open = new List<Position>();
+            PriorityQueue<Position, int> open = new PriorityQueue<Position, int>();
             List<Position> closed = new List<Position>();
+            from.Weight = 0;
+            open.Enqueue(from, Heuristic(from, to) + from.Weight);
 
-            for (int i = 0; i < all.Count; i++)
+
+            Position current = from;
+            while (open.Count != 0 && !closed.Exists(x=>x==to))
             {
-                if (all[i].IsNeighbors(from))
-                {
-                    all[i].Weight = 1;
-                    all[i].Parent = from;
-                }
-                else
-                    all[i].Weight = int.MaxValue / 30000;
-            }
-
-            from.Weight = int.MaxValue / 30000;
-            open.Add(from);
-
-            while (true)
-            {
-                int current_index = GetIndexOfLowest(open);
-                if (current_index >= open.Count)
-                    return false;
-                Position current = open[current_index];
-                open.RemoveAt(current_index);
+                current = open.Dequeue();
                 closed.Add(current);
-
-                if (current == to)
-                {
-                    positions_to_go.Clear();
-                    List<Position> result = new List<Position>();
-                    while (current != from)
-                    {
-                        positions_to_go.Push(current);
-                        current = current.Parent;
-                    }
-                    return true;
-                }
 
                 List<int> neighbors = new List<int>(GetIndexesOfNeighbors(current, all));
                 foreach (int neighbor in neighbors)
                 {
                     if (closed.Contains(all[neighbor])) continue;
 
-                    if (current.Weight + 1 < all[neighbor].Weight || !open.Contains(all[neighbor]))
+                    bool isFound = false;
+                    foreach (var oldPos in open.UnorderedItems)
                     {
-                        open.Remove(all[neighbor]);
+                        if(oldPos.Element == all[neighbor]) isFound = true;
+                    }
+
+                    if (!isFound)
+                    {
                         all[neighbor].Weight = current.Weight + 1;
                         all[neighbor].Parent = current;
-                        open.Add(all[neighbor]);
+                        open.Enqueue(all[neighbor], all[neighbor].Weight + Heuristic(all[neighbor], to));
                     }
                 }
             }
+
+            if(!closed.Exists(x=> x == to))
+            {
+                return false;
+            }
+
+            Position temp = closed[closed.IndexOf(current)];
+            if (temp == null) return false;
+            do
+            {
+                positions_to_go.Push(temp);
+                temp = temp.Parent;
+            } while (temp != from && temp != null);
+            
+            return true;
         }
+
+        private int Heuristic(Position start, Position goal)
+        {
+            var dx = goal.Row - start.Row;
+            var dy = goal.Col - start.Col;
+            return Math.Abs(dx) + Math.Abs(dy);
+        }
+
+        /*
+        vector<Node*> graph:: Astar(int x1, int y1, int x2, int y2)
+        {
+            Node* start = findnode(x1, y1), *end = findnode(x2, y2);
+            priorityQueue q;
+            vector<Node*> prev(g.size()* g[0].size(), nullptr);
+            vector<int> gscore(g.size()* g[0].size(), g.size() * g[0].size());
+            gscore[start->getX() * g[0].size() + start->getY()] = 0;
+            start->setp(heuristic(start, end));
+            q.push(start);
+            while (!q.isEmpty())
+            {
+                Node* current = q.pop();
+                if (current == end)
+                {
+                    break;
+                }
+                vector<Node*> & adjac = current->get_adj();
+                for (int i = 0; i < adjac.size(); i++)
+                {
+                    Node* neighbor = adjac[i];
+                    int ind = neighbor->getX() * g[0].size() + neighbor->getY();
+                    int tentativeGScore = gscore[current->getX() * g[0].size() + current->getY()] + 1;
+                    if (tentativeGScore < gscore[ind])
+                    {
+                        prev[ind] = current;
+                        gscore[ind] = tentativeGScore;
+                        neighbor->setp(tentativeGScore + heuristic(neighbor, end));
+                        if (!q.isin(neighbor))
+                        {
+                            q.push(neighbor);
+                        }
+                    }
+                }
+            }
+            if (prev[end->getX() * g[0].size() + end->getY()] == nullptr)
+            {
+                return std::vector<Node*>();
+            }
+            std::vector<Node*> path;
+            Node* current = end;
+            while (current != start)
+            {
+                path.insert(path.begin(), current);
+                current = prev[current->getX() * g[0].size() + current->getY()];
+            }
+            path.insert(path.begin(), start);
+            return path;
+        }
+        */
 
         private int GetIndexOfLowest(List<Position> positions)
         {
