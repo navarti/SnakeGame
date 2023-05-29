@@ -13,7 +13,7 @@
     <SolidColorBrush x:Key="LightForegroundPage" Color="#272537" />
     <SolidColorBrush x:Key="LightTextBox" Color="#353340" />
     <SolidColorBrush x:Key="LightMenuButtonIsMouseOver" Color="#7C7F7C" />
-    <SolidColorBrush x:Key="LightGridBackgroundColor">#312C40</SolidColorBrush>
+    <SolidColorBrush x:Key="LightGridBackgroundColor">#766b96</SolidColorBrush>
 
     <!--<SolidColorBrush x:Key="" Color="#555555" />
     <SolidColorBrush x:Key="ReadOnlyTextBrush" Color="#555555" />
