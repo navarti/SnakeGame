@@ -24,12 +24,10 @@ namespace SnakeGame
     public partial class MainWindow : Window
     {
         public MainPage Main { get;}
-        public GamePage Game { get;}
         
         public MainWindow()
         {
             Main = new MainPage();
-            Game = new GamePage();
             InitializeComponent();
             Content = Main;
         }

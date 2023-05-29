@@ -46,9 +46,8 @@ namespace SnakeGame.Pages.MainPageCategories.View
                     cols = temp;
                 }
 
-                MainWindow window = (MainWindow)Window.GetWindow(this);
-                window.Game.ChangeDimension(rows, cols);
-                window.Content = window.Game;
+                Window window = Window.GetWindow(this);
+                window.Content = new GamePage(rows, cols);
             }
         }
 

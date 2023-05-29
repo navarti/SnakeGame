@@ -40,25 +40,21 @@ namespace SnakeGame.GamePages
         {
             InitializeComponent();
             field = new Field(rows, cols);
-        }
-
-        public void ChangeDimension(int rows, int cols)
-        {
-            field = new Field(rows, cols); 
+            snake = new Snake(field);
+            controler = new Controler(snake);
             gridImages = SetupGrid();
-            mode = Mode.User;
         }
 
         private async Task RunGame()
         {
-            field = new Field(field.Rows, field.Cols);
-            snake = new Snake(field);
-            controler = new Controler(snake); 
             Draw();
             await ShowCountDown();
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
+            field = new Field(field.Rows, field.Cols);
+            snake = new Snake(field);
+            controler = new Controler(snake);
         }
 
         private async Task GameLoop()
@@ -76,14 +72,18 @@ namespace SnakeGame.GamePages
 
         int GetDelay()
         {
-            if(mode == Mode.User)
+            if (mode == Mode.User)
             {
                 return userSpeedLevels[(int)SpeedSlider.Value].Item2;
             }
             else
             {
-                return -((int)SpeedSlider.Value - (MAX_AI_SPEED+MIN_AI_SPEED));
+                return -((int)SpeedSlider.Value - (MAX_AI_SPEED + MIN_AI_SPEED));
             }
         }
     }
+
 }
+
+
+
