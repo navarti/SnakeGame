@@ -32,11 +32,10 @@ namespace SnakeGame.Pages.MainPageCategories.View
             {'H', "Hard"},
             {'A', "AI" }
         };
-
+        FileManager fm = new FileManager();
         List<Record> all_records;
         int counter = 0;
-        FileManager fm = new FileManager();
-
+        
         public RecordsView()
         {
             InitializeComponent();
@@ -114,12 +113,16 @@ namespace SnakeGame.Pages.MainPageCategories.View
 
         private void CheckInput(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+{0,3}");
+            Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
 
         private void textChangedEventHandler(object sender, EventArgs e)
         {
+            if (((TextBox)sender).Text.Length - 1 > View.SelectGameView.MAX_DIMENSION.ToString().Length)
+            {
+                ((TextBox)sender).Text = ((TextBox)sender).Text.ToString().Substring(0, ((TextBox)sender).Text.Length-1);
+            }
             FillRecords();
         }
 

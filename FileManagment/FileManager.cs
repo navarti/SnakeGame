@@ -16,6 +16,7 @@ using System.Windows.Documents;
 using System.Windows.Interop;
 using System.Windows.Navigation;
 using System.Windows.Threading;
+using System.Windows.Controls;
 
 namespace SnakeGame.FileManagment
 {
@@ -73,9 +74,16 @@ namespace SnakeGame.FileManagment
                 if (files_ignore.Contains(filenames[i])) continue;
                 if (!CheckFilename(filenames[i]))
                 {
-                    files_ignore.Add(filenames[i]);
-                    Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
-                    dispatcher.BeginInvoke(new Action(() => MessageBox.Show($"The file {filenames[i]} is not recognised. It is ignored")));
+                    if (Task.Run(() => MessageBox.Show($"The file {filenames[i]} is unrecognised. Should it be removed?",
+                                                                "", MessageBoxButton.YesNo, MessageBoxImage.Question)).Result == MessageBoxResult.Yes)
+                    {
+                        File.SetAttributes(filenames[i], FileAttributes.Normal);
+                        File.Delete(filenames[i]);
+                    }
+                    else
+                    {
+                        files_ignore.Add(filenames[i]);
+                    }
                     throw new Exception("Unrecognised file");
                 }
                 try
