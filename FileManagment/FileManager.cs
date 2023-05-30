@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace SnakeGame.FileManagment
     {
         readonly string filename_folder = "scores\\";
         readonly string extension = ".bin";
+        readonly char separator= '_';
+        List<string> files_ignore = new List<string>();
 
         public FileManager()
         {
@@ -34,6 +37,30 @@ namespace SnakeGame.FileManagment
             }
         }
 
+        bool CheckFilename(string filename)
+        {
+            if (!filename.EndsWith(extension)) return false;
+            
+            filename = filename.Substring(filename_folder.Length, filename.Length - (filename_folder.Length + extension.Length));
+            string[] parts = filename.Split(separator);
+
+            int rows, cols;
+            if (!int.TryParse(parts[0], out rows)) return false;
+            if (!int.TryParse(parts[1], out cols)) return false;
+
+            if (rows < Pages.MainPageCategories.View.SelectGameView.MIN_DIMENSION ||
+                cols < Pages.MainPageCategories.View.SelectGameView.MIN_DIMENSION ||
+                rows > Pages.MainPageCategories.View.SelectGameView.MAX_DIMENSION ||
+                cols > Pages.MainPageCategories.View.SelectGameView.MAX_DIMENSION)
+            {
+                return false;
+            }
+
+            if (parts[2].Length != 1) return false;
+            if (!Pages.MainPageCategories.View.RecordsView.levelDict.ContainsKey(parts[2][0])) return false;
+
+            return true;
+        } 
 
         // для Records
         public List<Record> GetAllRecords()
@@ -42,6 +69,15 @@ namespace SnakeGame.FileManagment
             List<Record> result = new List<Record>();
             for (int i = 0; i < filenames.Length; i++)
             {
+                
+                if (files_ignore.Contains(filenames[i])) continue;
+                if (!CheckFilename(filenames[i]))
+                {
+                    files_ignore.Add(filenames[i]);
+                    Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
+                    dispatcher.BeginInvoke(new Action(() => MessageBox.Show($"The file {filenames[i]} is not recognised. It is ignored")));
+                    throw new Exception("Unrecognised file");
+                }
                 try
                 {
                     result.Add(ReadRecord(filenames[i]));
@@ -53,16 +89,14 @@ namespace SnakeGame.FileManagment
                     Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
                     dispatcher.BeginInvoke(new Action(() => MessageBox.Show($"The file {filenames[i]} was damaged. The data was deleted")));
                     throw new Exception("Damaged file");
-                    return result;
                 }
             }
             return result;
         }
 
-
         string ParseFilenameToWrite(int rows, int cols, string level)
         {
-            return filename_folder + rows + "_" + cols + "_" + level[0] + extension;
+            return filename_folder + rows + separator + cols + separator + level[0] + extension;
         }
 
 

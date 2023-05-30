@@ -35,7 +35,8 @@ namespace SnakeGame.Pages.MainPageCategories.View
 
         List<Record> all_records;
         int counter = 0;
-        
+        FileManager fm = new FileManager();
+
         public RecordsView()
         {
             InitializeComponent();
@@ -44,7 +45,6 @@ namespace SnakeGame.Pages.MainPageCategories.View
 
         void FillRecords()
         {
-            FileManager fm = new FileManager();
             try
             {
                 all_records = fm.GetAllRecords();
@@ -114,7 +114,7 @@ namespace SnakeGame.Pages.MainPageCategories.View
 
         private void CheckInput(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
+            Regex regex = new Regex("[^0-9]+{0,3}");
             e.Handled = regex.IsMatch(e.Text);
         }
 
