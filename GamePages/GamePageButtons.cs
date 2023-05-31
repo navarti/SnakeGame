@@ -58,11 +58,16 @@ namespace SnakeGame.GamePages
             }
         }
 
+        private void StopClick(object sender, RoutedEventArgs e)
+        {
+            gameRunning = false;
+        }
+
 
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {
             MainWindow window = (MainWindow)Window.GetWindow(this);
-            window.Content = window.Main;
+            window.Content = new Pages.MainPage();
             window.KeyDown -= Page_KeyDown;
             window.PreviewKeyDown -= Page_PreviewKeyDown;
         }

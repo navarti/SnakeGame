@@ -44,16 +44,28 @@
                     Grid.Column="0"
                     VerticalAlignment="Center">
 
+            <RadioButton Style="{StaticResource MenuButtonStyle}"
+                         Height="100"
+                         Content="End"
+                         FontSize="40"
+                         Click="StopClick"
+                         Visibility="Hidden"
+                         x:Name="StopButton"
+                         HorizontalAlignment="Center"
+                         Margin="20"
+                         Width="100"/>
 
             <TextBlock Style="{StaticResource ColorTextBlock}"
                    Text="Score: 0"
                    x:Name="ScoreBlock"
                    VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
                    FontSize="45"
                    Margin="20"/>
 
 
             <StackPanel Orientation="Horizontal" Margin="20"
+                        HorizontalAlignment="Center"
                         x:Name="ModeSPanel">
                 <TextBlock Style="{StaticResource ColorTextBlock}"
                            Height="40"
@@ -71,7 +83,7 @@
             </StackPanel>
 
 
-            <StackPanel Margin="20" HorizontalAlignment="Left"
+            <StackPanel Margin="20" HorizontalAlignment="Center"
                         x:Name="SpeedSPanel">
                 <TextBlock Style="{StaticResource ColorTextBlock}"
                            Height="40"

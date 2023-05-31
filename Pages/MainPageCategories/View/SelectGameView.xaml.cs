@@ -28,13 +28,11 @@ namespace SnakeGame.Pages.MainPageCategories.View
         public SelectGameView()
         {
             InitializeComponent();
-            InputRows.Text = "15";
-            InputCols.Text = "15";
         }
 
         private void PlayClick(object sender, RoutedEventArgs e)
         {
-            if (ParseBoxes())
+            if (CheckBoxes())
             {
                 ErrorTextBlock.Text = "";
                 int rows = int.Parse(InputRows.Text);
@@ -46,12 +44,14 @@ namespace SnakeGame.Pages.MainPageCategories.View
                     cols = temp;
                 }
 
-                Window window = Window.GetWindow(this);
+                MainWindow window = (MainWindow)Window.GetWindow(this);
                 window.Content = new GamePage(rows, cols);
+                window.Rows = rows;
+                window.Cols = cols;
             }
         }
 
-        bool ParseBoxes()
+        bool CheckBoxes()
         {
             int rows, cols;
             if (!int.TryParse(InputRows.Text, out rows) || !int.TryParse(InputCols.Text, out cols))
@@ -86,6 +86,13 @@ namespace SnakeGame.Pages.MainPageCategories.View
             {
                 e.Handled = true;
             }
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = (MainWindow)Window.GetWindow(this);
+            InputRows.Text = window.Rows.ToString();
+            InputCols.Text = window.Cols.ToString();
         }
     }
 }

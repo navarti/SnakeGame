@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:SnakeGame.Pages.MainPageCategories.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
+             Loaded="UserControl_Loaded"
              Background="Transparent">
     <Grid>
         <Grid.ColumnDefinitions>

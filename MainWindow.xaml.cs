@@ -23,13 +23,14 @@ namespace SnakeGame
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainPage Main { get;}
-        
+        public int Rows { get; set; }
+        public int Cols { get; set; }
         public MainWindow()
         {
-            Main = new MainPage();
+            Rows = 15;
+            Cols = 15;
             InitializeComponent();
-            Content = Main;
+            Content = new MainPage();
         }
     }
 }

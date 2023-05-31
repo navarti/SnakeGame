@@ -119,10 +119,13 @@ namespace SnakeGame.GamePages
                 OverlayText.Text = i.ToString();
                 await Task.Delay(500);
             }
+            if(mode == Mode.AI) StopButton.Visibility = Visibility.Visible;
+            Overlay.Visibility = Visibility.Hidden;
         }
 
         private async Task ShowGameOver()
         {
+            if(mode == Mode.AI) StopButton.Visibility = Visibility.Hidden;
             await DrawDeadSnake();
             await Task.Delay(0);
             FileManagment.FileManager fm = new FileManagment.FileManager();

@@ -49,7 +49,6 @@ namespace SnakeGame.GamePages
         {
             Draw();
             await ShowCountDown();
-            Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
             field = new Field(field.Rows, field.Cols);
@@ -61,6 +60,10 @@ namespace SnakeGame.GamePages
         {
             while (!snake.GameOver)
             {
+                if(gameRunning == false)
+                {
+                    break;
+                }
                 await Task.Delay(GetDelay());
                 if (mode == Mode.AI)
 
