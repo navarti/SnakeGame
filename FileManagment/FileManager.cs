@@ -44,6 +44,7 @@ namespace SnakeGame.FileManagment
             filename = filename.Substring(filename_folder.Length, filename.Length - (filename_folder.Length + extension.Length));
             string[] parts = filename.Split(separator);
 
+            if(parts.Length != 3) return false;
             int rows, cols;
             if (!int.TryParse(parts[0], out rows)) return false;
             if (!int.TryParse(parts[1], out cols)) return false;
