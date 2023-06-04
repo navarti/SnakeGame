@@ -23,6 +23,10 @@ namespace SnakeGame.GamePages
 
         public Position FoodPos { get; private set; }
 
+        public bool Victory()
+        {
+            return EmptyPositions().Count() == 0;
+        }
         public Field(int rows, int cols)
         {
             Rows = rows;

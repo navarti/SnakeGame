@@ -132,9 +132,21 @@ namespace SnakeGame.GamePages
 
             string level = mode == Mode.AI ? "AI" : userSpeedLevels[(int)SpeedSlider.Value].Item1;
 
-            OverlayText.Text = fm.CheckAndWriteScore(field.Rows, field.Cols, snake.Score, level) ?
+            if (field.Victory())
+            {
+                fm.CheckAndWriteScore(field.Rows, field.Cols, snake.Score, level);
+                OverlayText.Text = "Congratulations! You won!";
+            }
+            else if (snake.Score == 0)
+            {
+                OverlayText.Text = "Game Over\n Press any key to restart";
+            }
+            else
+            {
+                OverlayText.Text = fm.CheckAndWriteScore(field.Rows, field.Cols, snake.Score, level) ?
                 "Congratulations! New record!\nPress any key to break it again" :
                 "Game Over\n Press any key to restart";
+            }
             Overlay.Visibility = Visibility.Visible;
             BackButton.Visibility = Visibility.Visible;
             ModeSPanel.Visibility = Visibility.Visible;
