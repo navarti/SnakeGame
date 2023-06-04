@@ -33,8 +33,7 @@ namespace SnakeGame.FileManagment
             {
                 DirectoryInfo di = Directory.CreateDirectory(filename_folder);
                 di.Attributes = FileAttributes.Directory | FileAttributes.Hidden;
-                Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
-                dispatcher.BeginInvoke(new Action(() => MessageBox.Show("New folder with records have been created. Go ahead to be the top!")));
+                Task.Run(() => MessageBox.Show("New folder with records have been created. Go ahead to be the top!"));
             }
         }
 
@@ -94,8 +93,7 @@ namespace SnakeGame.FileManagment
                 {
                     File.SetAttributes(filenames[i], FileAttributes.Normal);
                     File.Delete(filenames[i]);
-                    Dispatcher dispatcher = Dispatcher.CurrentDispatcher;
-                    dispatcher.BeginInvoke(new Action(() => MessageBox.Show($"The file {filenames[i]} was damaged. The data was deleted")));
+                    Task.Run(() => MessageBox.Show($"The file {filenames[i]} was damaged. The data was deleted"));
                     throw new Exception("Damaged file");
                 }
             }

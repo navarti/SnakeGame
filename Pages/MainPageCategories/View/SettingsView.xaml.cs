@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace SnakeGame.Pages.MainPageCategories.View
 {
-    /// <summary>
-    /// Interaction logic for SettingsView.xaml
-    /// </summary>
     public partial class SettingsView : UserControl
     {
         readonly string[] snakeColor = {"Gray", "Green", "Yellow", "Blue"};

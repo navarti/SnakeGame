@@ -17,9 +17,6 @@ using SnakeGame.GamePages;
 
 namespace SnakeGame.Pages
 {
-    /// <summary>
-    /// Interaction logic for MainPage.xaml
-    /// </summary>
     public partial class MainPage : Page
     {
         public MainPage()
@@ -30,16 +27,6 @@ namespace SnakeGame.Pages
         private void QuitClick(object sender, RoutedEventArgs e)
         {
             Shutdown.ShutdownProg();
-        }
-
-        public void ClassicModeLaunch()
-        {
-            NavigationService.Navigate(new GamePage());
-        }
-
-        public void aa()
-        {
-
         }
     }
 }

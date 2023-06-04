@@ -18,9 +18,6 @@ using SnakeGame.GamePages;
 
 namespace SnakeGame.Pages.MainPageCategories.View
 {
-    /// <summary>
-    /// Interaction logic for SelectGameView.xaml
-    /// </summary>
     public partial class SelectGameView : UserControl
     {
         public static readonly int MIN_DIMENSION = 5;
